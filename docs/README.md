@@ -1,5 +1,6 @@
+# `simplePipes`
 
-## simplePipes: An R Package
+## A Collection Pipe Operators for R
 
 ### Overview
 
