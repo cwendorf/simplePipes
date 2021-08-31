@@ -1,53 +1,86 @@
-# simplePipe
+---
+title: "Examples for simplePipes"
+author: "Craig A. Wendorf"
+output:
+  html_document:        
+    keep_md: TRUE
+---
+
+```{r,include=FALSE}
+library(simplePipes)
+```
+
 ## Basic Examples
-
-### Source the Functions
-
-source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simplePipes.R")
 
 ### Input Data
 
+```{r}
 variable=c(1,2,6,8,9,15)
 variable1=c(1,2,6,8,9,15)
 variable2=c(4,3,5,6,4,10)
 frame=data.frame(variable1,variable2)
+```
 
-### Simple Pipe
+### Simple Pipes
 
+#### Forward Simple Pipe
+
+```{r}
 mean(variable)
 variable %>% mean
+```
 
-### Simple BackPipe
+#### Backward Simple Pipe
 
+```{r}
 mean(variable)
 mean %<% variable
+```
 
-### Dot Pipe
+### Dot Pipes
 
+#### Forward Dot Pipe
+
+```{r}
 mean(variable,trim=.2)
 variable %.>% mean(.,trim=.2)
 variable %.>% mean(.,trim=.2) %.>% round(.,digits=1)
+```
 
-### Dot BackPipe
+#### Backward Dot Pipe
 
+```{r}
 mean(variable,trim=.2)
 mean(.,trim=.2) %<.% variable
 round(.,digits=1) %<.% mean(.,trim=.2) %<.% variable
+```
 
-### Tee Pipe
+### Tee Pipes
 
+#### Forward Tee Pipe
+
+```{r}
 mean(variable); sd(variable)
 variable %T>% c(mean,sd)
+```
 
-### Tee BackPipe
+#### Backward Tee Pipe
 
+```{r}
 mean(variable); sd(variable)
 c(mean,sd) %<T% variable
+```
 
-### Exposition Pipe
+### Exposition Pipes
 
+#### Forward Exposition Pipe
+
+```{r}
 frame %$>% mean(variable2)
+```
 
-### Exposition BackPipe
+#### Backward Exposition Pipe
 
+```{r}
 mean(variable2) %<$% frame
+```

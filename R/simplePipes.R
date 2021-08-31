@@ -1,16 +1,12 @@
 # simplePipes
 ## Simple Pipe Operators for R
 
-### Simple Pipe
-
-"%>%" <- function(lhs,rhs) do.call(rhs,list(lhs))
+### Simple Pipes
 
 "%>%" <- function(lhs,rhs) {
   if(typeof(lhs)=="list") {do.call(rhs,lhs)}
   else {do.call(rhs,list(lhs))}
 }
-
-### Simple BackPipe
 
 "%<%" <- function(lhs,rhs) do.call(lhs,list(rhs))
 
@@ -19,7 +15,7 @@
   else {do.call(lhs,list(rhs))}
 }
 
-### Dot Pipe
+### Dot Pipes
 
 "%.>%" <- function(lhs,rhs) {
   . <- eval(lhs)
@@ -27,15 +23,13 @@
   eval(rhs)
 }
 
-### Dot BackPipe
-
 "%<.%" <- function(lhs,rhs) {
   . <- eval(rhs)
   lhs <- substitute(lhs)
   eval(lhs)
 }
 
-### Tee Pipe
+### Tee Pipes
 
 "%T>%" <- function(lhs,rhs) {
   data <- eval(lhs)
@@ -44,8 +38,6 @@
   return(results)
 }
 
-### Tee BackPipe
-
 "%<T%" <- function(lhs,rhs) {
   data <- eval(rhs)
   arglist <- eval(lhs)
@@ -53,21 +45,13 @@
   return(results)
 }
 
-### Exposition Pipe
-
-"%$%" <- function(lhs,rhs) {
-  lhs <- substitute(lhs)
-  rhs <- substitute(rhs)
-  do.call(with,list(lhs,rhs))
-}
+### Exposition Pipes
 
 "%$>%" <- function(lhs,rhs) {
   lhs <- substitute(lhs)
   rhs <- substitute(rhs)
   do.call(with,list(lhs,rhs))
 }
-
-### Exposition BackPipe
 
 "%<$%" <- function(lhs,rhs) {
   lhs <- substitute(lhs)
