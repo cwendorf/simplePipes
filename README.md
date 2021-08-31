@@ -25,7 +25,7 @@ library(simplePipes)
 If you do not wish a full install, the latest functions can be sourced directly from GitHub:
 
 ```r
-source("http://raw.githubusercontent.com/cwendorf/DGB/main/source-simplePipes.R")
+source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simplePipes.R")
 ```
 
 ### Usage
