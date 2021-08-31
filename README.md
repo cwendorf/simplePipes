@@ -35,7 +35,7 @@ Simple documentation and examples are available:
 
 ### Citation
 
-Wendorf, C. A. (2021). _simplePipes: Simple pipe operators for R_ [R Package]. [https://cwendorf.github.io/simplePipes](https://cwendorf.github.io/simplePipes)
+Wendorf, C. A. (2021). _simplePipes: A collection of pipe operators for R_ [R Package]. [https://cwendorf.github.io/simplePipes](https://cwendorf.github.io/simplePipes)
 
 ### Contact Me
 
