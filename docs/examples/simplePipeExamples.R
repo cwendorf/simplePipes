@@ -1,9 +1,5 @@
-# simplePipe
-## Basic Examples
 
-### Source the Functions
-
-source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simplePipes.R")
+## Simple Examples
 
 ### Input Data
 
@@ -12,42 +8,51 @@ variable1=c(1,2,6,8,9,15)
 variable2=c(4,3,5,6,4,10)
 frame=data.frame(variable1,variable2)
 
-### Simple Pipe
+
+### Basic Pipes
+
+#### Forward Basic Pipe
 
 mean(variable)
 variable %>% mean
 
-### Simple BackPipe
+#### Backward Basic Pipe
 
 mean(variable)
 mean %<% variable
 
-### Dot Pipe
+### Dot Pipes
+
+#### Forward Dot Pipe
 
 mean(variable,trim=.2)
 variable %.>% mean(.,trim=.2)
 variable %.>% mean(.,trim=.2) %.>% round(.,digits=1)
 
-### Dot BackPipe
+#### Backward Dot Pipe
 
 mean(variable,trim=.2)
 mean(.,trim=.2) %<.% variable
 round(.,digits=1) %<.% mean(.,trim=.2) %<.% variable
 
-### Tee Pipe
+### Tee Pipes
+
+#### Forward Tee Pipe
 
 mean(variable); sd(variable)
 variable %T>% c(mean,sd)
 
-### Tee BackPipe
+#### Backward Tee Pipe
 
 mean(variable); sd(variable)
 c(mean,sd) %<T% variable
 
-### Exposition Pipe
+### Exposition Pipes
+
+#### Forward Exposition Pipe
 
 frame %$>% mean(variable2)
 
-### Exposition BackPipe
+#### Backward Exposition Pipe
 
 mean(variable2) %<$% frame

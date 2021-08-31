@@ -1,8 +1,7 @@
 
-## Basic Examples
+## Simple Examples
 
 ### Input Data
-
 
 ```r
 variable=c(1,2,6,8,9,15)
@@ -11,10 +10,9 @@ variable2=c(4,3,5,6,4,10)
 frame=data.frame(variable1,variable2)
 ```
 
-### Simple Pipes
+### Basic Pipes
 
-#### Forward Simple Pipe
-
+#### Forward Basic Pipe
 
 ```r
 mean(variable)
@@ -32,8 +30,7 @@ variable %>% mean
 ## [1] 6.833333
 ```
 
-#### Backward Simple Pipe
-
+#### Backward Basic Pipe
 
 ```r
 mean(variable)
@@ -54,7 +51,6 @@ mean %<% variable
 ### Dot Pipes
 
 #### Forward Dot Pipe
-
 
 ```r
 mean(variable,trim=.2)
@@ -81,7 +77,6 @@ variable %.>% mean(.,trim=.2) %.>% round(.,digits=1)
 ```
 
 #### Backward Dot Pipe
-
 
 ```r
 mean(variable,trim=.2)
@@ -111,7 +106,6 @@ round(.,digits=1) %<.% mean(.,trim=.2) %<.% variable
 
 #### Forward Tee Pipe
 
-
 ```r
 mean(variable); sd(variable)
 ```
@@ -133,7 +127,6 @@ variable %T>% c(mean,sd)
 ```
 
 #### Backward Tee Pipe
-
 
 ```r
 mean(variable); sd(variable)
@@ -159,7 +152,6 @@ c(mean,sd) %<T% variable
 
 #### Forward Exposition Pipe
 
-
 ```r
 frame %$>% mean(variable2)
 ```
@@ -169,7 +161,6 @@ frame %$>% mean(variable2)
 ```
 
 #### Backward Exposition Pipe
-
 
 ```r
 mean(variable2) %<$% frame

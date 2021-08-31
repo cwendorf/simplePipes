@@ -10,7 +10,7 @@ output:
 library(simplePipes)
 ```
 
-## Basic Examples
+## Simple Examples
 
 ### Input Data
 
@@ -21,16 +21,16 @@ variable2=c(4,3,5,6,4,10)
 frame=data.frame(variable1,variable2)
 ```
 
-### Simple Pipes
+### Basic Pipes
 
-#### Forward Simple Pipe
+#### Forward Basic Pipe
 
 ```{r}
 mean(variable)
 variable %>% mean
 ```
 
-#### Backward Simple Pipe
+#### Backward Basic Pipe
 
 ```{r}
 mean(variable)

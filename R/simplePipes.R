@@ -1,7 +1,7 @@
 # simplePipes
 ## Simple Pipe Operators for R
 
-### Simple Pipes
+### Basic Pipes
 
 "%>%" <- function(lhs,rhs) {
   if(typeof(lhs)=="list") {do.call(rhs,lhs)}
