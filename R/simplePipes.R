@@ -8,9 +8,7 @@
   else {do.call(rhs,list(lhs))}
 }
 
-"%<%" <- function(lhs,rhs) do.call(lhs,list(rhs))
-
-"%>%" <- function(lhs,rhs) {
+"%<%" <- function(lhs,rhs) {
   if(typeof(rhs)=="list") {do.call(lhs,rhs)}
   else {do.call(lhs,list(rhs))}
 }
