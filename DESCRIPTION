@@ -1,7 +1,7 @@
 Package: simplePipes
 Type: Package
 Title: simplePipes
-Description: Simple Pipe Operators for R 
+Description: A Collection of Pipe Operators for R 
 Version: 0.1.210901
 Depends: R (>= 3.6.2)
 Encoding: UTF-8
