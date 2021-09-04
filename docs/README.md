@@ -1,6 +1,6 @@
 # `simplePipes`
 
-## A Collection Pipe Operators for R
+## A Collection of Pipe Operators for R
 
 ### Overview
 
