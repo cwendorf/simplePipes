@@ -30,13 +30,25 @@
 ### Tee Pipes
 
 "%T>%" <- function(lhs,rhs) {
+  do.call(rhs,list(lhs))
+  invisible(lhs)
+}
+
+"%<T%" <- function(lhs,rhs) {
+  do.call(lhs,list(rhs))
+  invisible(rhs)
+}
+
+### Wye Pipes
+
+"%Y>%" <- function(lhs,rhs) {
   data <- eval(lhs)
   arglist <- eval(rhs)
   results <- sapply(arglist, function(FUN,data) FUN(data),data)
   return(results)
 }
 
-"%<T%" <- function(lhs,rhs) {
+"%<Y%" <- function(lhs,rhs) {
   data <- eval(rhs)
   arglist <- eval(lhs)
   results <- sapply(arglist, function(FUN,data) FUN(data),data)
@@ -55,4 +67,12 @@
   lhs <- substitute(lhs)
   rhs <- substitute(rhs)
   do.call(with,list(rhs,lhs))
+}
+
+### Compound Assignment Pipe
+
+"%<>%" <- function(lhs,rhs) {
+  x=do.call(rhs,list(lhs))
+  name = substitute(lhs)
+  assign(as.character(name),x,envir=.GlobalEnv)
 }
