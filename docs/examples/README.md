@@ -1,5 +1,5 @@
 
-## Simple Examples
+## simplePipes Examples
 
 ### Input Data
 
@@ -116,7 +116,7 @@ round(.,digits=1) %<.% mean(.,trim=.2) %<.% variable
 plot(variable); mean(variable)
 ```
 
-![](simplePipeExamples_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](figures/Forward-Tee-Plot-1.png)<!-- -->
 
 ```
 ## [1] 6.833333
@@ -126,7 +126,7 @@ plot(variable); mean(variable)
 variable %T>% plot %>% mean
 ```
 
-![](simplePipeExamples_files/figure-html/unnamed-chunk-7-2.png)<!-- -->
+![](figures/Forward-Tee-Plot-2.png)<!-- -->
 
 ```
 ## [1] 6.833333
@@ -139,7 +139,7 @@ variable %T>% plot %>% mean
 plot(variable); mean(variable)
 ```
 
-![](simplePipeExamples_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](figures/Backward-Tee-Plot-1.png)<!-- -->
 
 ```
 ## [1] 6.833333
@@ -149,7 +149,7 @@ plot(variable); mean(variable)
 plot %<T% variable %>% mean
 ```
 
-![](simplePipeExamples_files/figure-html/unnamed-chunk-8-2.png)<!-- -->
+![](figures/Backward-Tee-Plot-2.png)<!-- -->
 
 ```
 ## [1] 6.833333
