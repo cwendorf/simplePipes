@@ -3,6 +3,7 @@
 
 ### Input Data
 
+
 ```r
 variable=c(1,2,6,8,9,15)
 variable1=c(1,2,6,8,9,15)
@@ -13,6 +14,7 @@ frame=data.frame(variable1,variable2)
 ### Basic Pipes
 
 #### Forward Basic Pipe
+
 
 ```r
 mean(variable)
@@ -31,6 +33,7 @@ variable %>% mean
 ```
 
 #### Backward Basic Pipe
+
 
 ```r
 mean(variable)
@@ -51,6 +54,7 @@ mean %<% variable
 ### Dot Pipes
 
 #### Forward Dot Pipe
+
 
 ```r
 mean(variable,trim=.2)
@@ -78,6 +82,7 @@ variable %.>% mean(.,trim=.2) %.>% round(.,digits=1)
 
 #### Backward Dot Pipe
 
+
 ```r
 mean(variable,trim=.2)
 ```
@@ -102,9 +107,58 @@ round(.,digits=1) %<.% mean(.,trim=.2) %<.% variable
 ## [1] 6.2
 ```
 
-### Tee Pipes
+### Tee Pipe
 
 #### Forward Tee Pipe
+
+
+```r
+plot(variable); mean(variable)
+```
+
+![](simplePipeExamples_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+
+```
+## [1] 6.833333
+```
+
+```r
+variable %T>% plot %>% mean
+```
+
+![](simplePipeExamples_files/figure-html/unnamed-chunk-7-2.png)<!-- -->
+
+```
+## [1] 6.833333
+```
+
+#### Backward Tee Pipe
+
+
+```r
+plot(variable); mean(variable)
+```
+
+![](simplePipeExamples_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+
+```
+## [1] 6.833333
+```
+
+```r
+plot %<T% variable %>% mean
+```
+
+![](simplePipeExamples_files/figure-html/unnamed-chunk-8-2.png)<!-- -->
+
+```
+## [1] 6.833333
+```
+
+### Wye Pipes
+
+#### Forward Wye Pipe
+
 
 ```r
 mean(variable); sd(variable)
@@ -119,14 +173,15 @@ mean(variable); sd(variable)
 ```
 
 ```r
-variable %T>% c(mean,sd)
+variable %Y>% c(mean,sd)
 ```
 
 ```
 ## [1] 6.833333 5.115336
 ```
 
-#### Backward Tee Pipe
+#### Backward Wye Pipe
+
 
 ```r
 mean(variable); sd(variable)
@@ -141,7 +196,7 @@ mean(variable); sd(variable)
 ```
 
 ```r
-c(mean,sd) %<T% variable
+c(mean,sd) %<Y% variable
 ```
 
 ```
@@ -151,6 +206,7 @@ c(mean,sd) %<T% variable
 ### Exposition Pipes
 
 #### Forward Exposition Pipe
+
 
 ```r
 frame %$>% mean(variable2)
@@ -162,10 +218,24 @@ frame %$>% mean(variable2)
 
 #### Backward Exposition Pipe
 
+
 ```r
 mean(variable2) %<$% frame
 ```
 
 ```
 ## [1] 5.333333
+```
+
+### Compound Assignment Pipe
+
+
+```r
+newvariable <- variable
+newvariable %<>% mean
+newvariable
+```
+
+```
+## [1] 6.833333
 ```
