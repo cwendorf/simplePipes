@@ -1,5 +1,5 @@
 # simplePipes
-## Simple Pipe Operators for R
+## A Collection of Pipe Operators for R
 
 ### Basic Pipes
 
