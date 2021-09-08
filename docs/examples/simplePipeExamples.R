@@ -30,6 +30,8 @@ mean(variable,trim=.2)
 variable %.>% mean(.,trim=.2)
 variable %.>% mean(.,trim=.2) %.>% round(.,digits=1)
 
+.2 %.>% mean(variable,trim=.)
+
 #### Backward Dot Pipe
 
 mean(variable,trim=.2)
@@ -64,12 +66,15 @@ c(mean,sd) %<Y% variable
 
 #### Forward Exposition Pipe
 
+with(frame,mean(variable2))
 frame %$>% mean(variable2)
 frame %$>% variable2 %>% mean
 
 #### Backward Exposition Pipe
 
+with(frame,mean(variable2))
 mean(variable2) %<$% frame
+mean %<% variable2 %<$% frame
 
 ### Compound Assignment Pipe
 

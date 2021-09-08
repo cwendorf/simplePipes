@@ -107,13 +107,17 @@ c(mean,sd) %<Y% variable
 #### Forward Exposition Pipe
 
 ```{r}
+with(frame,mean(variable2))
 frame %$>% mean(variable2)
+frame %$>% variable2 %>% mean
 ```
 
 #### Backward Exposition Pipe
 
 ```{r}
+with(frame,mean(variable2))
 mean(variable2) %<$% frame
+mean %<% variable2 %<$% frame
 ```
 
 ### Compound Assignment Pipe
