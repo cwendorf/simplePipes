@@ -10,7 +10,7 @@
 
 ### Overview
 
-`simplePipes` is an R package that implements a variety of simple pipe operators. They provide basic functionality, but with less error checking than in major R packages (like `magrittr` or `dplyr`). `simplePipes` contains more varieties -- both forward and backward versions -- of basic pipes, dot pipes, exposition pipes, and tee pipes.
+`simplePipes` is an R package that implements a variety of simple pipe operators. They have less error checking than pipes from major R packages (like `magrittr` or `dplyr`) but contain more varieties -- both forward and backward versions -- of basic, dot, tee, wye, exposition, and compound assignment pipes.
 
 ### Installation
 
@@ -32,6 +32,9 @@ source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simple
 
 Simple documentation and examples are available:  
 [https://cwendorf.github.io/simplePipes/](https://cwendorf.github.io/simplePipes/)
+
+- Forward and backward versions of all pipes
+- Basic, dot, tee, wye, exposition, and compound assignment pipes
 
 ### Citation
 
