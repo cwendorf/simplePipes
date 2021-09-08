@@ -33,6 +33,11 @@ source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simple
 Simple documentation and examples are available:  
 [https://cwendorf.github.io/simplePipes/](https://cwendorf.github.io/simplePipes/)
 
+- Examples for means, mean differences, mean ratios, and contrasts of means
+- Examples for correlations and correlation differences
+- Examples for medians, median differences, median ratios, and contrasts of medians
+- Examples for proportions, proportion differences, proportion ratios, and contrasts of proportions
+
 ### Citation
 
 Wendorf, C. A. (2021). _simplePipes: A collection of pipe operators for R_ [R Package]. [https://cwendorf.github.io/simplePipes](https://cwendorf.github.io/simplePipes)
