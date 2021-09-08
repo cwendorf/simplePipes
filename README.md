@@ -33,6 +33,9 @@ source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simple
 Simple documentation and examples are available:  
 [https://cwendorf.github.io/simplePipes/](https://cwendorf.github.io/simplePipes/)
 
+- Forward and backward versions of all pipes
+- Basic, dot, tee, wye, exposition, and compound assignment pipes
+
 ### Citation
 
 Wendorf, C. A. (2021). _simplePipes: A collection of pipe operators for R_ [R Package]. [https://cwendorf.github.io/simplePipes](https://cwendorf.github.io/simplePipes)
