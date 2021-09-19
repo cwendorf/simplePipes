@@ -1,35 +1,18 @@
----
-title: "Basic Pipes"
-author: "Craig A. Wendorf"
-output:
-  html_document:
-    toc: true
-    toc_float: true
-    toc_depth: 4
-    collapse: true
-    theme: cerulean
-    highlight: tango
-    keep_md: TRUE
-vignette: >
-  %\VignetteIndexEntry{Basic Pipes}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
----
-
-
-
-
 
 ## Basic Pipes
 
 ### Input Data
+
+First, name a `variable` and assign an array of values back to it.
 
 
 ```r
 variable <- c(1,2,6,8,9,15)
 ```
 
-### Forward Basic Pipe
+### Standard R Syntax
+
+In standard R syntax, get the `mean` of the `variable`.
 
 
 ```r
@@ -39,6 +22,11 @@ mean(variable)
 ```
 ## [1] 6.833333
 ```
+
+### Forward Basic Pipe
+
+Using the forward basic pipe, identify the `variable` and then get its `mean`.
+
 
 ```r
 variable %>% mean
@@ -50,14 +38,8 @@ variable %>% mean
 
 ### Backward Basic Pipe
 
+Using the backward basic pipe, get the `mean` of the `variable`.
 
-```r
-mean(variable)
-```
-
-```
-## [1] 6.833333
-```
 
 ```r
 mean %<% variable

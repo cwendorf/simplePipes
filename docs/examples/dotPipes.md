@@ -1,35 +1,18 @@
----
-title: "Dot Pipes"
-author: "Craig A. Wendorf"
-output:
-  html_document:
-    toc: true
-    toc_float: true
-    toc_depth: 4
-    collapse: true
-    theme: cerulean
-    highlight: tango
-    keep_md: TRUE
-vignette: >
-  %\VignetteIndexEntry{Dot Pipes}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
----
-
-
-
-
 
 ## Dot Pipes
 
 ### Input Data
+
+First, name a `variable` and assign an array of values back to it.
 
 
 ```r
 variable <- c(1,2,6,8,9,15)
 ```
 
-### Forward Dot Pipe
+### Standard R Syntax
+
+In standard R syntax, get the `mean` of the `variable` (while also specifying additional commands).
 
 
 ```r
@@ -39,6 +22,11 @@ mean(variable,trim=.2)
 ```
 ## [1] 6.25
 ```
+
+### Forward Dot Pipe
+
+Using the forward dot pipe, identify the `variable` and then get its `mean` (while also specifying additional commands).
+
 
 ```r
 variable %.>% mean(.,trim=.2)
@@ -48,24 +36,10 @@ variable %.>% mean(.,trim=.2)
 ## [1] 6.25
 ```
 
-```r
-variable %.>% mean(.,trim=.2) %.>% round(.,digits=1)
-```
-
-```
-## [1] 6.2
-```
-
 ### Backward Dot Pipe
 
+Using the backward dot pipe, get the `mean` of the `variable` (while also specifying additional commands).
 
-```r
-mean(variable,trim=.2)
-```
-
-```
-## [1] 6.25
-```
 
 ```r
 mean(.,trim=.2) %<.% variable
@@ -73,12 +47,4 @@ mean(.,trim=.2) %<.% variable
 
 ```
 ## [1] 6.25
-```
-
-```r
-round(.,digits=1) %<.% mean(.,trim=.2) %<.% variable
-```
-
-```
-## [1] 6.2
 ```

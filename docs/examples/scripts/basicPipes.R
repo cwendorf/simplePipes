@@ -7,12 +7,14 @@ source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simple
 
 variable <- c(1,2,6,8,9,15)
 
-### Forward Basic Pipe
+### Standard R Syntax
 
 mean(variable)
+
+### Forward Basic Pipe
+
 variable %>% mean
 
 ### Backward Basic Pipe
 
-mean(variable)
 mean %<% variable

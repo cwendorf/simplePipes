@@ -332,20 +332,25 @@ div.tocify {
 <h2>Basic Pipes</h2>
 <div id="input-data" class="section level3">
 <h3>Input Data</h3>
+<p>First, name a <code>variable</code> and assign an array of values back to it.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>variable <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">15</span>)</span></code></pre></div>
+</div>
+<div id="standard-r-syntax" class="section level3">
+<h3>Standard R Syntax</h3>
+<p>In standard R syntax, get the <code>mean</code> of the <code>variable</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(variable)</span></code></pre></div>
+<pre><code>## [1] 6.833333</code></pre>
 </div>
 <div id="forward-basic-pipe" class="section level3">
 <h3>Forward Basic Pipe</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(variable)</span></code></pre></div>
-<pre><code>## [1] 6.833333</code></pre>
+<p>Using the forward basic pipe, identify the <code>variable</code> and then get its <code>mean</code>.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>variable <span class="sc">%&gt;%</span> mean</span></code></pre></div>
 <pre><code>## [1] 6.833333</code></pre>
 </div>
 <div id="backward-basic-pipe" class="section level3">
 <h3>Backward Basic Pipe</h3>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(variable)</span></code></pre></div>
-<pre><code>## [1] 6.833333</code></pre>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mean <span class="sc">%&lt;%</span> variable</span></code></pre></div>
+<p>Using the backward basic pipe, get the <code>mean</code> of the <code>variable</code>.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mean <span class="sc">%&lt;%</span> variable</span></code></pre></div>
 <pre><code>## [1] 6.833333</code></pre>
 </div>
 </div>

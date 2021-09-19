@@ -1,41 +1,37 @@
----
-title: "Assignment Pipes"
-author: "Craig A. Wendorf"
-output:
-  html_document:
-    toc: true
-    toc_float: true
-    toc_depth: 4
-    collapse: true
-    theme: cerulean
-    highlight: tango
-    keep_md: TRUE
-vignette: >
-  %\VignetteIndexEntry{Assignment Pipes}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
----
-
-
-
-
 
 ## Assignment Pipes
 
 ### Input Data
+
+First, name a `variable` and assign an array of values back to it.
 
 
 ```r
 variable <- c(1,2,6,8,9,15)
 ```
 
-### Compound Assignment Pipe
+### Standard R Syntax
+
+In standard R syntax, name a `variable` already in use, get the `mean` of the `variable` and assign the value back to the variable. Display the resulting value.
 
 
 ```r
-newvariable <- variable
-newvariable %<>% mean
-newvariable
+variable <- mean(variable)
+variable
+```
+
+```
+## [1] 6.833333
+```
+
+### Compound Assignment Pipe
+
+Using the compound assignment pipe, identify a `variable` already in use and assign its `mean` back to the variable. Display the resulting value.
+
+
+```r
+variable %<>% mean
+variable
 ```
 
 ```

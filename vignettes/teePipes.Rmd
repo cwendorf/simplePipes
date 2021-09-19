@@ -29,20 +29,32 @@ library(simplePipes)
 
 ### Input Data
 
+First, name a `variable` and assign an array of values back to it.
+
 ```{r}
 variable <- c(1,2,6,8,9,15)
 ```
 
+### Standard R Syntax
+
+In standard R syntax, `plot` the `variable` and then get the `mean` of the `variable`.
+
+```{r,Standard-Plot}
+plot(variable); mean(variable)
+```
+
 ### Forward Tee Pipe
 
+Using the forward tee pipe (and chaining in a basic pipe), identify the `variable` and then `plot` it and get its `mean`.
+
 ```{r,Forward-Tee-Plot}
-plot(variable); mean(variable)
 variable %T>% plot %>% mean
 ```
 
 ### Backward Tee Pipe
 
+Using the backward tee pipe (and chaining in a basic pipe), `plot` the `variable` and then get its `mean`.
+
 ```{r,Backward-Tee-Plot}
-plot(variable); mean(variable)
 plot %<T% variable %>% mean
 ```

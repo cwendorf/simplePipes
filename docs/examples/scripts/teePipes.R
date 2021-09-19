@@ -7,14 +7,14 @@ source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simple
 
 variable <- c(1,2,6,8,9,15)
 
-#### Forward Tee Pipe
+### Standard R Syntax
 
 plot(variable); mean(variable)
+
+#### Forward Tee Pipe
+
 variable %T>% plot %>% mean
 
 #### Backward Tee Pipe
 
-plot(variable); mean(variable)
 plot %<T% variable %>% mean
-
-mean %<% plot %<T% variable

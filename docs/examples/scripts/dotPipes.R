@@ -7,16 +7,14 @@ source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simple
 
 variable <- c(1,2,6,8,9,15)
 
-### Forward Dot Pipe
+### Standard R Syntax
 
 mean(variable,trim=.2)
-variable %.>% mean(.,trim=.2)
-variable %.>% mean(.,trim=.2) %.>% round(.,digits=1)
 
-.2 %.>% mean(variable,trim=.)
+### Forward Dot Pipe
+
+variable %.>% mean(.,trim=.2)
 
 ### Backward Dot Pipe
 
-mean(variable,trim=.2)
 mean(.,trim=.2) %<.% variable
-round(.,digits=1) %<.% mean(.,trim=.2) %<.% variable

@@ -7,6 +7,11 @@ source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simple
 
 variable <- c(1,2,6,8,9,15)
 
+### Standard R Syntax
+
+variable <- mean(variable)
+variable
+
 ### Compound Assignment Pipe
 
 variable %<>% mean

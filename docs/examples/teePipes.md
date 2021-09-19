@@ -1,39 +1,37 @@
----
-title: "Tee Pipes"
-author: "Craig A. Wendorf"
-output:
-  html_document:
-    toc: true
-    toc_float: true
-    toc_depth: 4
-    collapse: true
-    theme: cerulean
-    highlight: tango
-    keep_md: TRUE
-vignette: >
-  %\VignetteIndexEntry{Tee Pipes}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
----
-
-
-
-
 
 ## Tee Pipes
 
 ### Input Data
+
+First, name a `variable` and assign an array of values back to it.
 
 
 ```r
 variable <- c(1,2,6,8,9,15)
 ```
 
-### Forward Tee Pipe
+### Standard R Syntax
+
+In standard R syntax, `plot` the `variable` and then get the `mean` of the `variable`.
 
 
 ```r
 plot(variable); mean(variable)
+```
+
+![](figures/Standard-Plot-1.png)<!-- -->
+
+```
+## [1] 6.833333
+```
+
+### Forward Tee Pipe
+
+Using the forward tee pipe (and chaining in a basic pipe), identify the `variable` and then `plot` it and get its `mean`.
+
+
+```r
+variable %T>% plot %>% mean
 ```
 
 ![](figures/Forward-Tee-Plot-1.png)<!-- -->
@@ -42,34 +40,16 @@ plot(variable); mean(variable)
 ## [1] 6.833333
 ```
 
-```r
-variable %T>% plot %>% mean
-```
-
-![](figures/Forward-Tee-Plot-2.png)<!-- -->
-
-```
-## [1] 6.833333
-```
-
 ### Backward Tee Pipe
 
+Using the backward tee pipe (and chaining in a basic pipe), `plot` the `variable` and then get its `mean`.
 
-```r
-plot(variable); mean(variable)
-```
-
-![](figures/Backward-Tee-Plot-1.png)<!-- -->
-
-```
-## [1] 6.833333
-```
 
 ```r
 plot %<T% variable %>% mean
 ```
 
-![](figures/Backward-Tee-Plot-2.png)<!-- -->
+![](figures/Backward-Tee-Plot-1.png)<!-- -->
 
 ```
 ## [1] 6.833333

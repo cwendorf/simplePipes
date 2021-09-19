@@ -7,12 +7,14 @@ source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simple
 
 variable <- c(1,2,6,8,9,15)
 
-#### Forward Wye Pipe
+### Standard R Syntax
 
 mean(variable); sd(variable)
+
+#### Forward Wye Pipe
+
 variable %Y>% c(mean,sd)
 
 #### Backward Wye Pipe
 
-mean(variable); sd(variable)
 c(mean,sd) %<Y% variable

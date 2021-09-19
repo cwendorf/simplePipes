@@ -332,26 +332,33 @@ div.tocify {
 <h2>Exposition Pipes</h2>
 <div id="input-data" class="section level3">
 <h3>Input Data</h3>
+<p>First, name a few variables and assign arrays of values back them. Then create a <code>frame</code> that holds both variables.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>variable1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">9</span>,<span class="dv">15</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>variable2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">10</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>frame <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(variable1,variable2)</span></code></pre></div>
 </div>
-<div id="forward-exposition-pipe" class="section level3">
-<h3>Forward Exposition Pipe</h3>
+<div id="standard-r-syntax" class="section level3">
+<h3>Standard R Syntax</h3>
+<p>In standard R syntax, use <code>with</code> to select the data <code>frame</code>, then get the <code>mean</code> of <code>variable2</code>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(frame,<span class="fu">mean</span>(variable2))</span></code></pre></div>
 <pre><code>## [1] 5.333333</code></pre>
+</div>
+<div id="forward-exposition-pipe" class="section level3">
+<h3>Forward Exposition Pipe</h3>
+<p>Using the forward exposition pipe, select the data <code>frame</code>, then get the <code>mean</code> of <code>variable2</code>.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>frame <span class="sc">%$&gt;%</span> <span class="fu">mean</span>(variable2)</span></code></pre></div>
 <pre><code>## [1] 5.333333</code></pre>
+<p>Going a step further by chaining in a basic pipe, select the data <code>frame</code>, then identify <code>variable2</code> and get its <code>mean</code>.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>frame <span class="sc">%$&gt;%</span> variable2 <span class="sc">%&gt;%</span> mean</span></code></pre></div>
 <pre><code>## [1] 5.333333</code></pre>
 </div>
 <div id="backward-exposition-pipe" class="section level3">
 <h3>Backward Exposition Pipe</h3>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">with</span>(frame,<span class="fu">mean</span>(variable2))</span></code></pre></div>
+<p>Using the backward exposition pipe, get the <code>mean</code> of <code>variable2</code> using the data <code>frame</code>.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(variable2) <span class="sc">%&lt;$%</span> frame</span></code></pre></div>
 <pre><code>## [1] 5.333333</code></pre>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(variable2) <span class="sc">%&lt;$%</span> frame</span></code></pre></div>
-<pre><code>## [1] 5.333333</code></pre>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>mean <span class="sc">%&lt;%</span> variable2 <span class="sc">%&lt;$%</span> frame</span></code></pre></div>
+<p>Going a step further by chaining in a basic pipe, get the <code>main</code> of <code>variable2</code> using the data <code>frame</code>.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>mean <span class="sc">%&lt;%</span> variable2 <span class="sc">%&lt;$%</span> frame</span></code></pre></div>
 <pre><code>## [1] 5.333333</code></pre>
 </div>
 </div>

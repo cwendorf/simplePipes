@@ -1,28 +1,9 @@
----
-title: "Exposition Pipes"
-author: "Craig A. Wendorf"
-output:
-  html_document:
-    toc: true
-    toc_float: true
-    toc_depth: 4
-    collapse: true
-    theme: cerulean
-    highlight: tango
-    keep_md: TRUE
-vignette: >
-  %\VignetteIndexEntry{Exposition Pipes}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
----
-
-
-
-
 
 ## Exposition Pipes
 
 ### Input Data
+
+First, name a few variables and assign arrays of values back them. Then create a `frame` that holds both variables.
 
 
 ```r
@@ -31,7 +12,9 @@ variable2 <- c(4,3,5,6,4,10)
 frame <- data.frame(variable1,variable2)
 ```
 
-### Forward Exposition Pipe
+### Standard R Syntax
+
+In standard R syntax, use `with` to select the data `frame`, then get the `mean` of `variable2`.
 
 
 ```r
@@ -42,6 +25,11 @@ with(frame,mean(variable2))
 ## [1] 5.333333
 ```
 
+### Forward Exposition Pipe
+
+Using the forward exposition pipe, select the data `frame`, then get the `mean` of `variable2`.
+
+
 ```r
 frame %$>% mean(variable2)
 ```
@@ -49,6 +37,9 @@ frame %$>% mean(variable2)
 ```
 ## [1] 5.333333
 ```
+
+Going a step further by chaining in a basic pipe, select the data `frame`, then identify `variable2` and get its `mean`.
+
 
 ```r
 frame %$>% variable2 %>% mean
@@ -60,14 +51,8 @@ frame %$>% variable2 %>% mean
 
 ### Backward Exposition Pipe
 
+Using the backward exposition pipe, get the `mean` of `variable2` using the data `frame`. 
 
-```r
-with(frame,mean(variable2))
-```
-
-```
-## [1] 5.333333
-```
 
 ```r
 mean(variable2) %<$% frame
@@ -76,6 +61,9 @@ mean(variable2) %<$% frame
 ```
 ## [1] 5.333333
 ```
+
+Going a step further by chaining in a basic pipe, get the `main` of `variable2` using the data `frame`.
+
 
 ```r
 mean %<% variable2 %<$% frame
