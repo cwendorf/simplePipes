@@ -33,8 +33,8 @@ source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simple
 Simple documentation and examples are available:  
 [https://cwendorf.github.io/simplePipes/](https://cwendorf.github.io/simplePipes/)
 
-- Forward and backward versions of all pipes
 - Basic, dot, tee, wye, exposition, and compound assignment pipes
+- Forward and backward versions of all pipes
 
 ### Citation
 
