@@ -62,7 +62,7 @@ mean(variable2) %<$% frame
 ## [1] 5.333333
 ```
 
-Going a step further by chaining in a basic pipe, get the `main` of `variable2` using the data `frame`.
+Going a step further by chaining in a basic pipe, get the `mean` of `variable2` using the data `frame`.
 
 
 ```r

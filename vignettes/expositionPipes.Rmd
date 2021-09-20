@@ -67,7 +67,7 @@ Using the backward exposition pipe, get the `mean` of `variable2` using the data
 mean(variable2) %<$% frame
 ```
 
-Going a step further by chaining in a basic pipe, get the `main` of `variable2` using the data `frame`.
+Going a step further by chaining in a basic pipe, get the `mean` of `variable2` using the data `frame`.
 
 ```{r}
 mean %<% variable2 %<$% frame
