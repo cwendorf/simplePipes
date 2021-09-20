@@ -2,7 +2,7 @@
 <img src="logo.png" height="60px;" align="left;">
 </a>
 
-# `simplePipes`
+# simplePipes
 ## A Collection of Pipe Operators for R
 
 [![minimal R version](https://img.shields.io/badge/R%3E%3D-3.5.0-6666ff.svg)](https://cran.r-project.org/)
@@ -10,7 +10,7 @@
 
 ### Overview
 
-`simplePipes` is an R package that implements a variety of simple pipe operators. They have less error checking than pipes from major R packages (like `magrittr` or `dplyr`) but contain more varieties -- both forward and backward versions of basic, dot, tee, wye, exposition, and compound assignment pipes.
+**simplePipes** is an R package that implements a variety of simple pipe operators. They have less error checking than pipes from major R packages (like **magrittr** or **dplyr**) but contain more varieties -- both forward and backward versions of basic, dot, tee, wye, exposition, and compound assignment pipes.
 
 ### Installation
 
