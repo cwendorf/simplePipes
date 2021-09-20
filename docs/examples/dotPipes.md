@@ -1,6 +1,8 @@
 
 ## Dot Pipes
 
+Dot pipes also chain commands but expand on basic pipes by allowing the piped values to be placed anywhere in the next command.
+
 ### Input Data
 
 First, name a `variable` and assign an array of values back to it.

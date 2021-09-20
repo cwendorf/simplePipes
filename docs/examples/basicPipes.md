@@ -1,6 +1,8 @@
 
 ## Basic Pipes
 
+Basic pipes are used for chaining (rather than nesting) commands. They assume that the piped values are the first and only arguments passed to the next command.
+
 ### Input Data
 
 First, name a `variable` and assign an array of values back to it.

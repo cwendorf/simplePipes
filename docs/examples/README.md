@@ -12,7 +12,7 @@ Basic pipes are used for chaining (rather than nesting) commands. They assume th
 
 ### Dot Pipes
 
-Dot pipes chain commands but expand on basic pipes by allowing the piped values to be placed anywhere in the next command.
+Dot pipes also chain commands but expand on basic pipes by allowing the piped values to be placed anywhere in the next command.
 
 - [*dotPipes*](./dotPipes.md) - Examples of forward and backward dot pipes
 
@@ -30,7 +30,7 @@ Wye pipes chain a first command to two (or more) subsequent commands simultaneou
 
 ### Exposition Pipes
 
-Exposition pipes indicate a data set to be used prior to other commands (or pipes).
+Exposition pipes indicate a data set to be used for other commands (or pipes).
 
 - [*expositionPipes*](./expositionPipes.md) - Examples of forward and backward exposition pipes
 

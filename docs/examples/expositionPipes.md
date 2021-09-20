@@ -1,6 +1,8 @@
 
 ## Exposition Pipes
 
+Exposition pipes indicate a data set to be used for other commands (or pipes).
+
 ### Input Data
 
 First, name a few variables and assign arrays of values back them. Then create a `frame` that holds both variables.

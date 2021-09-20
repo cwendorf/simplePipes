@@ -1,6 +1,8 @@
 
 ## Assignment Pipes
 
+Assignment pipes both chain commands and redefine the objects in the chain.
+
 ### Input Data
 
 First, name a `variable` and assign an array of values back to it.
