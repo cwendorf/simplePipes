@@ -1,4 +1,4 @@
-## Examples for simplePipes
+## Tutorials for simplePipes
 
 ### Overview
 

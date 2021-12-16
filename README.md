@@ -30,7 +30,7 @@ source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simple
 
 ### Usage
 
-Simple documentation and examples are available:  
+Simple documentation and tutorials are available:  
 [https://cwendorf.github.io/simplePipes/](https://cwendorf.github.io/simplePipes/)
 
 - Basic, dot, tee, wye, exposition, and compound assignment pipes
