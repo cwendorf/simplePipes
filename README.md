@@ -28,14 +28,14 @@ source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simple
 ### Usage
 
 Simple documentation and tutorials are available:  
-[https://cwendorf.github.io/simplePipes/](https://cwendorf.github.io/simplePipes/)
+[https://github.com/cwendorf/simplePipes/tree/main/docs](https://github.com/cwendorf/simplePipes/tree/main/docs)
 
 - Basic, dot, tee, wye, exposition, and compound assignment pipes
 - Forward and backward versions of all pipes
 
 ### Citation
 
-Wendorf, C. A. (2021). _simplePipes: A collection of pipe operators for R_ [R Package]. [https://github.com/cwendorf/simplePipes](https://github.com/cwendorf/simplePipes)
+Wendorf, C. A. (2021). _simplePipes: A collection of pipe operators_ [R Package]. [https://github.com/cwendorf/simplePipes](https://github.com/cwendorf/simplePipes)
 
 ### Contact Me
 
