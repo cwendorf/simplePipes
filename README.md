@@ -33,13 +33,12 @@ Simple documentation and tutorials are available:
 - Basic, dot, tee, wye, exposition, and compound assignment pipes
 - Forward and backward versions of all pipes
 
-### Citation
-
-Wendorf, C. A. (2021). _simplePipes: A collection of pipe operators_ [R Package]. [https://github.com/cwendorf/simplePipes](https://github.com/cwendorf/simplePipes)
-
 ### Contact Me
 
 - GitHub Issues: [https://github.com/cwendorf/simplePipes/issues](https://github.com/cwendorf/simplePipes/issues) 
 - Author Email: [cwendorf@uwsp.edu](mailto:cwendorf@uwsp.edu)
 - Author Homepage: [https://cwendorf.github.io](https://cwendorf.github.io)
  
+### Citation
+
+Wendorf, C. A. (2021). _simplePipes: A collection of pipe operators_ [R Package]. [https://github.com/cwendorf/simplePipes](https://github.com/cwendorf/simplePipes)
