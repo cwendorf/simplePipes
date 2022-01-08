@@ -1,28 +1,41 @@
-# simplePipes
-
-## A Collection of Pipe Operators for R
+## Tutorials for simplePipes
 
 ### Overview
 
-**simplePipes** is an R package that implements a variety of simple pipe operators. It has less error checking than major R packages (like **magrittr** or **dplyr**) but contains more varieties -- both forward and backward versions of basic, dot, tee, wye, exposition, and compound assignment pipes.
+**simplePipes** is an R package that implements a variety of simple pipe operators. For most varieties, both forward and backward versions are available. All tutorials first use standard R syntax, followed by piped versions.
 
-### Installation
+### Basic Pipes
 
-This package is not currently on CRAN, but can be installed from GitHub:
+Basic pipes are used for chaining (rather than nesting) commands. They assume that the piped values are the first and only arguments passed to the next command.
 
-``` r
-install.packages("devtools")
-devtools::install_github("cwendorf/simplePipes")
-library(simplePipes)
-```
+- [*basicPipes*](./basicPipes.md) - Tutorial using forward and backward basic pipes
 
-If you do not wish a full install, the latest functions can be sourced directly from GitHub:
+### Dot Pipes
 
-```r
-source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simplePipes.R")
-```
+Dot pipes also chain commands but expand on basic pipes by allowing the piped values to be placed anywhere in the next command.
 
-### Citation
+- [*dotPipes*](./dotPipes.md) - Tutorial using forward and backward dot pipes
 
-Wendorf, C. A. (Ed.) (2021). _simplePipes: A collection of pipe operators for R_ [R Package]. [https://cwendorf.github.io/simplePipes](https://cwendorf.github.io/simplePipes)
+### Tee Pipes
 
+Tee pipes also involve chaining commands but are used when an intermediate command produces output (such as a plot). The intermediate command also acts as a flow-through to a third command in the chain.
+
+- [*teePipes*](./teePipes.md) - Tutorial using forward and backward tee pipes
+
+### Wye Pipes
+
+Wye pipes chain a first command to two (or more) subsequent commands simultaneously. They take the place of multiple pipes.
+
+- [*wyePipes*](./wyePipes.md) - Tutorial using forward and backward wye pipes
+
+### Exposition Pipes
+
+Exposition pipes indicate a data set to be used for other commands (or pipes).
+
+- [*expositionPipes*](./expositionPipes.md) - Tutorial using forward and backward exposition pipes
+
+### Assignment Pipes
+
+Assignment pipes both chain commands and redefine the objects in the chain.
+
+- [*assignmentPipes*](./assignmentPipes.md) - Tutorial using compound assignment pipes
