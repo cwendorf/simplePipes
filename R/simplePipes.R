@@ -72,7 +72,7 @@
 ### Compound Assignment Pipe
 
 "%<>%" <- function(lhs,rhs) {
-  x=do.call(rhs,list(lhs))
-  name = substitute(lhs)
+  x <- do.call(rhs,list(lhs))
+  name <- substitute(lhs)
   assign(as.character(name),x,envir=.GlobalEnv)
 }
