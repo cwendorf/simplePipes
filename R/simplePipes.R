@@ -4,13 +4,11 @@
 ### Basic Pipes
 
 "%>%" <- function(lhs,rhs) {
-  if(typeof(lhs)=="list") {do.call(rhs,lhs)}
-  else {do.call(rhs,list(lhs))}
+  do.call(rhs,list(lhs))
 }
 
 "%<%" <- function(lhs,rhs) {
-  if(typeof(rhs)=="list") {do.call(lhs,rhs)}
-  else {do.call(lhs,list(rhs))}
+  do.call(lhs,list(rhs))
 }
 
 ### Dot Pipes
