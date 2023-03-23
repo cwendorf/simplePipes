@@ -27,8 +27,7 @@ source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simple
 
 ### Usage
 
-Simple documentation and tutorials are available:  
-[https://github.com/cwendorf/simplePipes/tree/main/docs](https://github.com/cwendorf/simplePipes/tree/main/docs)
+The [Tutorial for simplePipes](./docs/README.md) provides an explanation and examples of:
 
 - Basic, dot, tee, wye, exposition, and compound assignment pipes
 - Forward and backward versions of all pipes
