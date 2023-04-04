@@ -41,4 +41,4 @@ The [Tutorial for simplePipes](./docs/README.md) provides an explanation and exa
  
 ### Citation
 
-Wendorf, C. A. (2021). _simplePipes: A collection of pipe operators_ [R Package]. [https://github.com/cwendorf/simplePipes](https://github.com/cwendorf/simplePipes)
+Wendorf, C. A. (2021). *simplePipes: A collection of pipe operators* [R Package]. [https://github.com/cwendorf/simplePipes](https://github.com/cwendorf/simplePipes)
