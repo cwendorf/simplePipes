@@ -22,10 +22,15 @@ knitr::opts_chunk$set(fig.width=7, fig.height=5,fig.path='figures/',echo=TRUE,wa
 ```
 
 ```{r,include=FALSE}
+if(!require(simplePipes)) {
+if(!require(remotes)) install.packages('remotes')
+remotes::install_github("cwendorf/simplePipes")}
 library(simplePipes)
 ```
 
 ## Tee Pipes
+
+Tee pipes also involve chaining commands but are used when an intermediate command produces output (such as a plot). The intermediate command also acts as a flow-through to a third command in the chain.
 
 ### Input Data
 

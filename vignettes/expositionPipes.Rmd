@@ -22,10 +22,15 @@ knitr::opts_chunk$set(fig.width=7, fig.height=5,fig.path='figures/',echo=TRUE,wa
 ```
 
 ```{r,include=FALSE}
+if(!require(simplePipes)) {
+if(!require(remotes)) install.packages('remotes')
+remotes::install_github("cwendorf/simplePipes")}
 library(simplePipes)
 ```
 
 ## Exposition Pipes
+
+Exposition pipes indicate a data set to be used for other commands (or pipes).
 
 ### Input Data
 
