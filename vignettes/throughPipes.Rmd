@@ -1,5 +1,5 @@
 ---
-title: "Wye Pipes"
+title: "simplePipes"
 author: "Craig A. Wendorf"
 output:
   html_document:
@@ -11,7 +11,7 @@ output:
     highlight: tango
     keep_md: TRUE
 vignette: >
-  %\VignetteIndexEntry{Passthrough Pipes}
+  %\VignetteIndexEntry{Through Pipes}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -28,9 +28,9 @@ remotes::install_github("cwendorf/simplePipes")}
 library(simplePipes)
 ```
 
-## Passthrough Pipes
+## Through Pipes
 
-Passthrough pipes chain a series of commands, allowing the first piped values to be used as input in multiple subsequent commands (rather than just the next command in the chain).
+Through pipes chain a series of commands, allowing the first piped values to be used as input in multiple subsequent commands (rather than just the next command in the chain). They expand the functionality of tee pipes.
 
 ### Input Data
 
@@ -42,7 +42,7 @@ variable <- c(1,2,6,8,9,15)
 
 ### Standard R Syntax
 
-In standard R syntax, get the `mean` of the `variable` and also get the `sd` of the `variable`.
+In standard R syntax, get the `mean` of the `variable` and then get the `sd` of the `variable`.
 
 ```{r}
 mean(variable); sd(variable)
@@ -50,7 +50,7 @@ mean(variable); sd(variable)
 
 ### Forward Passthrough Pipe
 
-Using the forward passthrough pipe, identify the `variable` and then get both its `mean` and `sd`.
+Using the forward through pipe, identify the `variable` and then get both its `mean` and `sd`.
 
 ```{r}
 variable %.>>% mean(.) %.>>% sd(.)

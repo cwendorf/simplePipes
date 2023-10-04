@@ -18,7 +18,7 @@ The simplest pipes implement piping, but they assume that the piped values are t
 
 These pipes are useful for data selection and asssignment. In particular, they are helpful for replacing common data manipulation tasks with infix operators.
 
-- [*expositionPipes*](./expositionPipes.md) - Exposition pipes indicate a data set to be used for other commands (or pipes).
+- [*expositionPipes*](./expositionPipes.md) - Exposition pipes indicate a data set to be used for other commands (or pipes), replacing the need for a `with` command.
 
 - [*assignmentPipes*](./assignmentPipes.md) - Compound assignment pipes both chain commands and redefine the objects in the chain.
 
@@ -26,6 +26,6 @@ These pipes are useful for data selection and asssignment. In particular, they a
 
 The most functional and flexible pipes use a placeholder (the dot) to move data from one section of the pipe to the next. 
 
-- [*dotPipes*](./dotPipes.md) - Simple dot pipes also chain commands but expand on basic pipes by allowing the piped values to be placed anywhere in the next command in the chain.
+- [*dotPipes*](./dotPipes.md) - Simple dot pipes also chain commands but expand on basic pipes by allowing the piped values to be placed anywhere in the next command in the chain. They expand the functionality of both basic and wye pipes.
 
-- [*passthroughPipes*](./passthroughPipes.md) - Passthrough pipes chain a series of commands, allowing the first piped values to be used as input in multiple subsequent commands (rather than just the next command in the chain).
+- [*throughPipes*](./throughPipes.md) - Through pipes chain a series of commands, allowing the first piped values to be used as input in multiple subsequent commands (rather than just the next command in the chain). They expand the functionality of tee pipes.

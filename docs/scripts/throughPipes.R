@@ -1,5 +1,5 @@
 # simplePipes
-## Tee Pipes
+## Through Pipes
 
 source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simplePipes.R")
 
@@ -9,12 +9,8 @@ variable <- c(1,2,6,8,9,15)
 
 ### Standard R Syntax
 
-plot(variable); mean(variable)
+mean(variable); sd(variable)
 
-### Forward Tee Pipe
+### Forward Through Pipe
 
-variable %T>% plot %>% mean
-
-### Backward Tee Pipe
-
-plot %<T% variable %>% mean
+variable %.>>% mean(.) %.>>% sd(.)

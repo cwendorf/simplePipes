@@ -1,6 +1,6 @@
 ## Exposition Pipes
 
-Exposition pipes indicate a data set to be used for other commands (or pipes).
+Exposition pipes indicate a data set to be used for other commands (or pipes), replacing the need for a `with` command.
 
 ### Input Data
 
