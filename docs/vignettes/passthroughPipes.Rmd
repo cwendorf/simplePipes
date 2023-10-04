@@ -1,5 +1,5 @@
 ---
-title: "Tee Pipes"
+title: "Passthrough Pipes"
 author: "Craig A. Wendorf"
 output:
   html_document:
@@ -11,7 +11,7 @@ output:
     highlight: tango
     keep_md: TRUE
 vignette: >
-  %\VignetteIndexEntry{Tee Pipes}
+  %\VignetteIndexEntry{Passthrough Pipes}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -28,9 +28,9 @@ remotes::install_github("cwendorf/simplePipes")}
 library(simplePipes)
 ```
 
-## Tee Pipes
+## Passthrough Pipes
 
-Tee pipes also involve chaining commands but are used when an intermediate command produces output (such as a plot). The intermediate command also acts as a flow-through to a third command in the chain.
+Passthrough pipes chain a series of commands, allowing the first piped values to be used as input in multiple subsequent commands (rather than just the next command in the chain).
 
 ### Input Data
 
@@ -42,24 +42,16 @@ variable <- c(1,2,6,8,9,15)
 
 ### Standard R Syntax
 
-In standard R syntax, `plot` the `variable` and then get the `mean` of the `variable`.
+In standard R syntax, get the `mean` of the `variable` and also get the `sd` of the `variable`.
 
-```{r,Standard-Plot}
-plot(variable); mean(variable)
+```{r}
+mean(variable); sd(variable)
 ```
 
-### Forward Tee Pipe
+### Forward Passthrough Pipe
 
-Using the forward tee pipe (and chaining in a basic pipe), identify the `variable` and then `plot` it and get its `mean`.
+Using the forward passthrough pipe, identify the `variable` and then get both its `mean` and `sd`.
 
-```{r,Forward-Tee-Plot}
-variable %T>% plot %>% mean
-```
-
-### Backward Tee Pipe
-
-Using the backward tee pipe (and chaining in a basic pipe), `plot` the `variable` and then get its `mean`.
-
-```{r,Backward-Tee-Plot}
-plot %<T% variable %>% mean
+```{r}
+variable %.>>% mean(.) %.>>% sd(.)
 ```

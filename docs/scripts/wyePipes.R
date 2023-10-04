@@ -1,4 +1,4 @@
-
+# simplePipes
 ## Wye Pipes
 
 source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simplePipes.R")
@@ -11,10 +11,10 @@ variable <- c(1,2,6,8,9,15)
 
 mean(variable); sd(variable)
 
-#### Forward Wye Pipe
+### Forward Wye Pipe
 
 variable %Y>% c(mean,sd)
 
-#### Backward Wye Pipe
+### Backward Wye Pipe
 
 c(mean,sd) %<Y% variable
