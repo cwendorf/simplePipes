@@ -63,23 +63,33 @@
 
 ### Simple Dot Pipes
 
-"%.>%" <- function(lhs,rhs) {
+insert_dot <- function(expr) {
+  if (is.symbol(expr)) {expr <- as.call(c(expr, quote(`.`)))}
+  else if (length(expr) == 1) {expr <- as.call(c(expr[[1]], quote(`.`)))} 
+  else if (all(sapply(expr[-1], `!=`, quote(`.`)))) {expr <- as.call(c(expr[[1]], quote(`.`), as.list(expr[-1])))}
+  return(expr)
+}
+
+'%.>%' <- forwardPipe <- function(lhs,rhs) {
   . <- eval(lhs)
   rhs <- substitute(rhs)
+  rhs <- insert_dot(rhs)
   eval(rhs)
 }
 
-"%<.%" <- function(lhs,rhs) {
+"%<.%" <- backwardPipe <- function(lhs,rhs) {
   . <- eval(rhs)
   lhs <- substitute(lhs)
+  lhs <- insert_dot(lhs) 
   eval(lhs)
 }
 
-### Passthrough Dot Pipes
+### Through Dot Pipe
 
 "%.>>%" <- function(lhs,rhs) {
   . <- eval(lhs)
   rhs <- substitute(rhs)
+  rhs <- insert_dot(rhs)
   print(eval(rhs))
   invisible(.)
 }
