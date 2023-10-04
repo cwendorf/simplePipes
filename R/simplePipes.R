@@ -11,20 +11,6 @@
   do.call(lhs,list(rhs))
 }
 
-### Dot Pipes
-
-"%.>%" <- function(lhs,rhs) {
-  . <- eval(lhs)
-  rhs <- substitute(rhs)
-  eval(rhs)
-}
-
-"%<.%" <- function(lhs,rhs) {
-  . <- eval(rhs)
-  lhs <- substitute(lhs)
-  eval(lhs)
-}
-
 ### Tee Pipes
 
 "%T>%" <- function(lhs,rhs) {
@@ -73,4 +59,27 @@
   x <- do.call(rhs,list(lhs))
   name <- substitute(lhs)
   assign(as.character(name),x,envir=.GlobalEnv)
+}
+
+### Simple Dot Pipes
+
+"%.>%" <- function(lhs,rhs) {
+  . <- eval(lhs)
+  rhs <- substitute(rhs)
+  eval(rhs)
+}
+
+"%<.%" <- function(lhs,rhs) {
+  . <- eval(rhs)
+  lhs <- substitute(lhs)
+  eval(lhs)
+}
+
+### Passthrough Dot Pipes
+
+"%.>>%" <- function(lhs,rhs) {
+  . <- eval(lhs)
+  rhs <- substitute(rhs)
+  print(eval(rhs))
+  invisible(.)
 }

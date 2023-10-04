@@ -2,9 +2,10 @@
 
 ## Developmental Version
 
-- Added vignettes
+- Added forward and backward passthrough pipes
+- Added vignettes to explain the advantages of each type
 
-## 0.1.210901
+## simplePipes 0.1.210901
 
 - Initial release
 - Basic forward and backward simple, dot, tee, and exposition pipes
