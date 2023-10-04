@@ -1,4 +1,3 @@
-
 ## Wye Pipes
 
 Wye pipes chain a first command to two (or more) subsequent commands simultaneously. They take the place of multiple pipes.
@@ -6,6 +5,7 @@ Wye pipes chain a first command to two (or more) subsequent commands simultaneou
 ### Input Data
 
 First, name a `variable` and assign an array of values back to it.
+
 
 ```r
 variable <- c(1,2,6,8,9,15)

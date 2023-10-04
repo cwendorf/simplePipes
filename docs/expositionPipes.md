@@ -1,4 +1,3 @@
-
 ## Exposition Pipes
 
 Exposition pipes indicate a data set to be used for other commands (or pipes).

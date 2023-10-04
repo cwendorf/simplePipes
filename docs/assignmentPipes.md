@@ -1,4 +1,3 @@
-
 ## Assignment Pipes
 
 Assignment pipes both chain commands and redefine the objects in the chain.

@@ -1,4 +1,3 @@
-
 ## Tee Pipes
 
 Tee pipes also involve chaining commands but are used when an intermediate command produces output (such as a plot). The intermediate command also acts as a flow-through to a third command in the chain.
@@ -6,6 +5,7 @@ Tee pipes also involve chaining commands but are used when an intermediate comma
 ### Input Data
 
 First, name a `variable` and assign an array of values back to it.
+
 
 ```r
 variable <- c(1,2,6,8,9,15)
