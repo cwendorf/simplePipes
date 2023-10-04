@@ -2,7 +2,7 @@ Package: simplePipes
 Type: Package
 Title: simplePipes
 Description: A Collection of Pipe Operators for R 
-Version: 0.1.210901
+Version: 1.0.231004
 Depends: R (>= 3.6.2)
 Encoding: UTF-8
 LazyData: true

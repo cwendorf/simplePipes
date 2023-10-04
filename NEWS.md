@@ -1,8 +1,8 @@
 # simplePipes
 
-## Developmental Version
+## simplePipes 1.0.231004
 
-- Added forward and backward passthrough pipes
+- Added forward passthrough pipes
 - Added vignettes to explain the advantages of each type
 
 ## simplePipes 0.1.210901
