@@ -1,5 +1,5 @@
 ---
-title: "Wye Pipes"
+title: "simplePipes"
 author: "Craig A. Wendorf"
 output:
   html_document:
