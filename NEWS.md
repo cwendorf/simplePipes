@@ -2,8 +2,8 @@
 
 ## simplePipes 1.0.231004
 
-- Added forward passthrough pipes
-- Added vignettes to explain the advantages of each type
+- Added forward passthrough pipe
+- Added vignettes to explain the advantages of each type of pipe
 
 ## simplePipes 0.1.210901
 
