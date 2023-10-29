@@ -10,15 +10,16 @@ vignette: >
 ---
 
 ```{r,include=FALSE}
-#suppress the warnings and other messages from showing in the knitted file.
-knitr::opts_chunk$set(fig.width=7, fig.height=5,fig.path='figures/',echo=TRUE,warning=FALSE,message=FALSE)
-devtools::source_gist("8e6e5dc401e3fc1042ef7a030f9d19c7",filename='revised_toc.R')
+# suppress the warnings and other messages from showing in the knitted file.
+knitr::opts_chunk$set(fig.width = 7, fig.height = 5, fig.path = "figures/", echo = TRUE, warning = FALSE, message = FALSE)
+devtools::source_gist("8e6e5dc401e3fc1042ef7a030f9d19c7", filename = "revised_toc.R")
 ```
 
 ```{r,include=FALSE}
-if(!require(simplePipes)) {
-if(!require(remotes)) install.packages('remotes')
-remotes::install_github("cwendorf/simplePipes")}
+if (!require(simplePipes)) {
+  if (!require(remotes)) install.packages("remotes")
+  remotes::install_github("cwendorf/simplePipes")
+}
 library(simplePipes)
 ```
 
@@ -28,7 +29,7 @@ Assignment pipes both chain commands and redefine the objects in the chain.
 
 ```{r toc, echo=FALSE}
 thisfile <- knitr::current_input()
-revised_toc(thisfile,base_level=3,toc_depth=4)
+revised_toc(thisfile, base_level = 3, toc_depth = 4)
 ```
 
 ---
@@ -38,7 +39,7 @@ revised_toc(thisfile,base_level=3,toc_depth=4)
 First, name a `variable` and assign an array of values back to it.
 
 ```{r}
-variable <- c(1,2,6,8,9,15)
+variable <- c(1, 2, 6, 8, 9, 15)
 ```
 
 ### Standard R Syntax

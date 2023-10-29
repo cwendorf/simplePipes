@@ -10,15 +10,16 @@ vignette: >
 ---
 
 ```{r,include=FALSE}
-#suppress the warnings and other messages from showing in the knitted file.
-knitr::opts_chunk$set(fig.width=7, fig.height=5,fig.path='figures/',echo=TRUE,warning=FALSE,message=FALSE)
-devtools::source_gist("8e6e5dc401e3fc1042ef7a030f9d19c7",filename='revised_toc.R')
+# suppress the warnings and other messages from showing in the knitted file.
+knitr::opts_chunk$set(fig.width = 7, fig.height = 5, fig.path = "figures/", echo = TRUE, warning = FALSE, message = FALSE)
+devtools::source_gist("8e6e5dc401e3fc1042ef7a030f9d19c7", filename = "revised_toc.R")
 ```
 
 ```{r,include=FALSE}
-if(!require(simplePipes)) {
-if(!require(remotes)) install.packages('remotes')
-remotes::install_github("cwendorf/simplePipes")}
+if (!require(simplePipes)) {
+  if (!require(remotes)) install.packages("remotes")
+  remotes::install_github("cwendorf/simplePipes")
+}
 library(simplePipes)
 ```
 
@@ -28,7 +29,7 @@ Wye pipes chain a first command to two (or more) subsequent commands simultaneou
 
 ```{r toc, echo=FALSE}
 thisfile <- knitr::current_input()
-revised_toc(thisfile,base_level=3,toc_depth=4)
+revised_toc(thisfile, base_level = 3, toc_depth = 4)
 ```
 
 ---
@@ -38,7 +39,7 @@ revised_toc(thisfile,base_level=3,toc_depth=4)
 First, name a `variable` and assign an array of values back to it.
 
 ```{r}
-variable <- c(1,2,6,8,9,15)
+variable <- c(1, 2, 6, 8, 9, 15)
 ```
 
 ### Standard R Syntax
@@ -46,7 +47,8 @@ variable <- c(1,2,6,8,9,15)
 In standard R syntax, get the `mean` of the `variable` and also get the `sd` of the `variable`.
 
 ```{r}
-mean(variable); sd(variable)
+mean(variable)
+sd(variable)
 ```
 
 ### Forward Wye Pipe
@@ -54,7 +56,7 @@ mean(variable); sd(variable)
 Using the forward wye pipe, identify the `variable` and then get both its `mean` and `sd`.
 
 ```{r}
-variable %Y>% c(mean,sd)
+variable %Y>% c(mean, sd)
 ```
 
 ### Backward Wye Pipe
@@ -62,5 +64,5 @@ variable %Y>% c(mean,sd)
 Using the backward wye pipe, get both the `mean` and `sd` of the `variable`.
 
 ```{r}
-c(mean,sd) %<Y% variable
+c(mean, sd) %<Y% variable
 ```
