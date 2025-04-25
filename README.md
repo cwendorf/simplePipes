@@ -28,11 +28,15 @@ source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simple
 
 ### Usage
 
-The [Tutorials for simplePipes](./docs/README.md) provide explanations and examples of:
+The package provides explanations and examples of:
 
-- The Simplest Pipes: Versions of basic, tee, and wye pipes 
-- The Data Manipulation Pipes: Versions of exposition and compound assignment pipes
-- The Functional Dot Pipes: Versions of simple dot and through pipes
+- [Basic Pipes](./docs/basicPipes.md) - Basic pipes are used for chaining (rather than nesting) commands. They assume that the piped values are the first and only arguments passed to the next command.
+- [Tee Pipes](./docs/teePipes.md) - Tee pipes also involve chaining commands but are used when an intermediate command produces output (such as a plot). The intermediate command also acts as a flow-through to a third command in the chain.
+- [Wye Pipes](./docs/wyePipes.md) - Wye pipes chain a first command to two (or more) subsequent commands simultaneously. They take the place of multiple pipes.
+- [Exposition Pipes](./docs/expositionPipes.md) - Exposition pipes indicate a data set to be used for other commands (or pipes), replacing the need for a `with` command.
+- [Assignment Pipes](./docs/assignmentPipes.md) - Compound assignment pipes both chain commands and redefine the objects in the chain.
+- [Dot Pipes](./docs/dotPipes.md) - Simple dot pipes also chain commands but expand on basic pipes by allowing the piped values to be placed anywhere in the next command in the chain. They expand the functionality of both basic and wye pipes.
+- [Through Pipes](./docs/throughPipes.md) - Through pipes chain a series of commands, allowing the first piped values to be used as input in multiple subsequent commands (rather than just the next command in the chain). They expand the functionality of tee pipes.
 
 ### Contact Me
 
