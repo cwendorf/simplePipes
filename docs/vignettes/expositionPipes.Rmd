@@ -85,7 +85,7 @@ frame %$>% mean(variable2)
 Going a step further by chaining in a basic pipe, select the data `frame`, then identify `variable2` and get its `mean`.
 
 ```{r}
-frame %$>% variable2 %>% mean()
+frame %$>% variable2 %>% mean
 ```
 
 ### Backward Exposition Pipe
