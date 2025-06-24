@@ -42,6 +42,12 @@ First, name a `variable` and assign an array of values back to it.
 variable <- c(1, 2, 6, 8, 9, 15)
 ```
 
+Though it's not commonly demonstrated, R does permit forward assignment of vales to a `variable`.
+
+```{r}
+c(1, 2, 6, 8, 9, 15) -> variable
+```
+
 ### Standard R Syntax
 
 In standard R syntax, get the `mean` of the `variable` and also get the `sd` of the `variable`.
@@ -49,6 +55,17 @@ In standard R syntax, get the `mean` of the `variable` and also get the `sd` of 
 ```{r}
 mean(variable)
 sd(variable)
+```
+
+### Native Pipe
+
+After version 4.1, R includes a native forward pipe and shorthand syntax for anonymous functions. 
+
+
+Here, the anonymous function is used to create a dot placeholder (`x`) and then to pipe into multiple functions, like `mean` and `sd`.
+
+```{r}
+variable |> (\(x) c(mean(x), sd(x)))()
 ```
 
 ### Forward Wye Pipe
