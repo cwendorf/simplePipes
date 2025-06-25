@@ -6,7 +6,7 @@
 #' This is used internally to support dot-based pipe semantics.
 #' @param expr A language object (expression or call) to modify.
 #' @return A modified call with `.` inserted as an argument where appropriate.
-#' @keywords internal
+#' @noRd
 insert_dot <- function(expr) {
   if (is.symbol(expr)) {
     expr <- as.call(c(expr, quote(`.`)))
@@ -23,6 +23,7 @@ insert_dot <- function(expr) {
 #' @param lhs An object to assign to `.`.
 #' @param rhs An expression using `.`.
 #' @return The result of evaluating `rhs` with `.` set to `lhs`.
+#' @export
 dot_foward <- "%.>%" <- forwardPipe <- function(lhs, rhs) {
   . <- eval(lhs)
   rhs <- substitute(rhs)
@@ -35,6 +36,7 @@ dot_foward <- "%.>%" <- forwardPipe <- function(lhs, rhs) {
 #' @param lhs An expression using `.`.
 #' @param rhs An object to assign to `.`.
 #' @return The result of evaluating `lhs` with `.` set to `rhs`.
+#' @export
 dot_backward <- "%<.%" <- backwardPipe <- function(lhs, rhs) {
   . <- eval(rhs)
   lhs <- substitute(lhs)

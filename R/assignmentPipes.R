@@ -6,6 +6,7 @@
 #' @param lhs A variable name.
 #' @param rhs A function to apply to `lhs`.
 #' @return The result assigned back to `lhs` in the global environment.
+#' @export
 compound_assignment <- "%<>%" <- function(lhs, rhs) {
   x <- do.call(rhs, list(lhs))
   name <- substitute(lhs)

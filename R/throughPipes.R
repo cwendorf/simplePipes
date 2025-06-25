@@ -6,6 +6,7 @@
 #' @param lhs An object to assign to `.`.
 #' @param rhs An expression using `.`.
 #' @return Invisibly returns `lhs` after printing the result of `rhs`.
+#' @export
 through_forward <- "%.>>%" <- function(lhs, rhs) {
   . <- eval(lhs)
   rhs <- substitute(rhs)

@@ -6,6 +6,7 @@
 #' @param lhs A data object (e.g., a data frame).
 #' @param rhs An expression to evaluate within `lhs`.
 #' @return The result of evaluating `rhs` within `lhs`.
+#' @export
 exposition_forward <- "%$>%" <- function(lhs, rhs) {
   lhs <- substitute(lhs)
   rhs <- substitute(rhs)
@@ -17,6 +18,7 @@ exposition_forward <- "%$>%" <- function(lhs, rhs) {
 #' @param lhs An expression to evaluate within `rhs`.
 #' @param rhs A data object (e.g., a data frame).
 #' @return The result of evaluating `lhs` within `rhs`.
+#' @export
 exposition_backward <- "%<$%" <- function(lhs, rhs) {
   lhs <- substitute(lhs)
   rhs <- substitute(rhs)

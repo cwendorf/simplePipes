@@ -6,6 +6,7 @@
 #' @param lhs An expression evaluating to a single object.
 #' @param rhs An expression evaluating to a list of functions.
 #' @return A vector of results from applying each function in `rhs` to `lhs`.
+#' @export
 wye_forward <- "%Y>%" <- function(lhs, rhs) {
   data <- eval(lhs)
   arglist <- eval(rhs)
@@ -18,6 +19,7 @@ wye_forward <- "%Y>%" <- function(lhs, rhs) {
 #' @param lhs An expression evaluating to a list of functions.
 #' @param rhs An expression evaluating to a single object.
 #' @return A vector of results from applying each function in `lhs` to `rhs`.
+#' @export
 wye_backward <- "%<Y%" <- function(lhs, rhs) {
   data <- eval(rhs)
   arglist <- eval(lhs)
