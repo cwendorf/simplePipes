@@ -1,0 +1,24 @@
+# simplePipes
+## Exposition Pipes
+
+#' @title Exposition Forward Pipe
+#' @description Evaluates an expression within the environment of a data object.
+#' @param lhs A data object (e.g., a data frame).
+#' @param rhs An expression to evaluate within `lhs`.
+#' @return The result of evaluating `rhs` within `lhs`.
+exposition_forward <- "%$>%" <- function(lhs, rhs) {
+  lhs <- substitute(lhs)
+  rhs <- substitute(rhs)
+  do.call(with, list(lhs, rhs))
+}
+
+#' @title Exposition Backward Pipe
+#' @description Evaluates a data object within the environment of an expression.
+#' @param lhs An expression to evaluate within `rhs`.
+#' @param rhs A data object (e.g., a data frame).
+#' @return The result of evaluating `lhs` within `rhs`.
+exposition_backward <- "%<$%" <- function(lhs, rhs) {
+  lhs <- substitute(lhs)
+  rhs <- substitute(rhs)
+  do.call(with, list(rhs, lhs))
+}
