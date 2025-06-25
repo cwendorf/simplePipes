@@ -1,5 +1,10 @@
 # simplePipes
 
+## simplePipes 1.1.250625
+
+- Added documentation to functions
+- Updated vignettes to contrast with R native pipe implementation
+
 ## simplePipes 1.0.231004
 
 - Added forward through pipe
