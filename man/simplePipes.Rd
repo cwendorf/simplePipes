@@ -9,12 +9,20 @@
 simplePipes provides a collection of lightweight pipe operators for R.
 }
 \details{
-simplePipes is a small R package that implements a variety of simple pipe operators. 
-It has less error checking than major R packages (like magrittr or dplyr) but contains more varieties -- 
-both forward and backward versions of basic, tee, wye, exposition, compound assignment, and dot pipes -- 
+simplePipes is a small R package that implements a variety of simple pipe operators.
+It has less error checking than major R packages (like magrittr or dplyr) but contains more varieties --
+both forward and backward versions of basic, tee, wye, exposition, compound assignment, and dot pipes --
 and introduces the concept of through pipes. It also implements syntax that is simpler than the R native forward pipe.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/cwendorf/polyPlot}
+  \item Report bugs at \url{https://github.com/cwendorf/polyPlot/issues}
+}
+
+}
 \author{
-**Maintainer**: Craig Wendorf  
+\strong{Maintainer}: Craig Wendorf
 \email{cwendorf@uwsp.edu}
 }

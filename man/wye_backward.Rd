@@ -13,7 +13,7 @@ wye_backward(lhs, rhs)
 \item{rhs}{An expression evaluating to a single object.}
 }
 \value{
-A vector of results from applying each function in `lhs` to `rhs`.
+A vector of results from applying each function in \code{lhs} to \code{rhs}.
 }
 \description{
 Applies a list of functions to a single input and returns a vector of results.

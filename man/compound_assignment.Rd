@@ -10,10 +10,10 @@ compound_assignment(lhs, rhs)
 \arguments{
 \item{lhs}{A variable name.}
 
-\item{rhs}{A function to apply to `lhs`.}
+\item{rhs}{A function to apply to \code{lhs}.}
 }
 \value{
-The result assigned back to `lhs` in the global environment.
+The result assigned back to \code{lhs} in the global environment.
 }
 \description{
 Updates a variable by piping it through a function and reassigning the result.

@@ -8,13 +8,13 @@
 dot_forward(lhs, rhs)
 }
 \arguments{
-\item{lhs}{An object to assign to `.`.}
+\item{lhs}{An object to assign to \code{.}.}
 
-\item{rhs}{An expression using `.`.}
+\item{rhs}{An expression using \code{.}.}
 }
 \value{
-The result of evaluating `rhs` with `.` set to `lhs`.
+The result of evaluating \code{rhs} with \code{.} set to \code{lhs}.
 }
 \description{
-Passes the left-hand value as `.` into the right-hand expression.
+Passes the left-hand value as \code{.} into the right-hand expression.
 }

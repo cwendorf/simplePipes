@@ -8,13 +8,13 @@
 through_forward(lhs, rhs)
 }
 \arguments{
-\item{lhs}{An object to assign to `.`.}
+\item{lhs}{An object to assign to \code{.}.}
 
-\item{rhs}{An expression using `.`.}
+\item{rhs}{An expression using \code{.}.}
 }
 \value{
-Invisibly returns `lhs` after printing the result of `rhs`.
+Invisibly returns \code{lhs} after printing the result of \code{rhs}.
 }
 \description{
-Evaluates an expression using `.` and returns the original value invisibly after printing the result.
+Evaluates an expression using \code{.} and returns the original value invisibly after printing the result.
 }

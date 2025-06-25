@@ -8,13 +8,13 @@
 dot_backward(lhs, rhs)
 }
 \arguments{
-\item{lhs}{An expression using `.`.}
+\item{lhs}{An expression using \code{.}.}
 
-\item{rhs}{An object to assign to `.`.}
+\item{rhs}{An object to assign to \code{.}.}
 }
 \value{
-The result of evaluating `lhs` with `.` set to `rhs`.
+The result of evaluating \code{lhs} with \code{.} set to \code{rhs}.
 }
 \description{
-Passes the right-hand value as `.` into the left-hand expression.
+Passes the right-hand value as \code{.} into the left-hand expression.
 }

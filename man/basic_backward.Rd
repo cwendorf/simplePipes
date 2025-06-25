@@ -8,12 +8,12 @@
 basic_backward(lhs, rhs)
 }
 \arguments{
-\item{lhs}{A function to apply to `rhs`.}
+\item{lhs}{A function to apply to \code{rhs}.}
 
 \item{rhs}{An object to be passed to the function.}
 }
 \value{
-The result of applying `lhs` to `rhs`.
+The result of applying \code{lhs} to \code{rhs}.
 }
 \description{
 Passes the result of the right-hand side expression as the first argument to the left-hand side function.

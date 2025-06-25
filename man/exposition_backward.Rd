@@ -8,12 +8,12 @@
 exposition_backward(lhs, rhs)
 }
 \arguments{
-\item{lhs}{An expression to evaluate within `rhs`.}
+\item{lhs}{An expression to evaluate within \code{rhs}.}
 
 \item{rhs}{A data object (e.g., a data frame).}
 }
 \value{
-The result of evaluating `lhs` within `rhs`.
+The result of evaluating \code{lhs} within \code{rhs}.
 }
 \description{
 Evaluates a data object within the environment of an expression.

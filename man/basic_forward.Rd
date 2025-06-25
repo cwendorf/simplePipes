@@ -10,10 +10,10 @@ basic_forward(lhs, rhs)
 \arguments{
 \item{lhs}{An object to be passed to the function.}
 
-\item{rhs}{A function to apply to `lhs`.}
+\item{rhs}{A function to apply to \code{lhs}.}
 }
 \value{
-The result of applying `rhs` to `lhs`.
+The result of applying \code{rhs} to \code{lhs}.
 }
 \description{
 Passes the result of the left-hand side expression as the first argument to the right-hand side function.

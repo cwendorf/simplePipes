@@ -8,12 +8,12 @@
 tee_backward(lhs, rhs)
 }
 \arguments{
-\item{lhs}{A function to apply to `rhs` for side effects.}
+\item{lhs}{A function to apply to \code{rhs} for side effects.}
 
-\item{rhs}{An object to be passed to `lhs`.}
+\item{rhs}{An object to be passed to \code{lhs}.}
 }
 \value{
-Invisibly returns `rhs`.
+Invisibly returns \code{rhs}.
 }
 \description{
 Evaluates a function on the right-hand value for side effects, but returns the original right-hand value.

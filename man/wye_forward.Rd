@@ -13,7 +13,7 @@ wye_forward(lhs, rhs)
 \item{rhs}{An expression evaluating to a list of functions.}
 }
 \value{
-A vector of results from applying each function in `rhs` to `lhs`.
+A vector of results from applying each function in \code{rhs} to \code{lhs}.
 }
 \description{
 Applies a list of functions to a single input and returns a vector of results.

@@ -8,12 +8,12 @@
 tee_forward(lhs, rhs)
 }
 \arguments{
-\item{lhs}{An object to be passed to `rhs`.}
+\item{lhs}{An object to be passed to \code{rhs}.}
 
-\item{rhs}{A function to apply to `lhs` for side effects.}
+\item{rhs}{A function to apply to \code{lhs} for side effects.}
 }
 \value{
-Invisibly returns `lhs`.
+Invisibly returns \code{lhs}.
 }
 \description{
 Evaluates a function on the left-hand value for side effects, but returns the original left-hand value.

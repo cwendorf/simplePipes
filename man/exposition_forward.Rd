@@ -10,10 +10,10 @@ exposition_forward(lhs, rhs)
 \arguments{
 \item{lhs}{A data object (e.g., a data frame).}
 
-\item{rhs}{An expression to evaluate within `lhs`.}
+\item{rhs}{An expression to evaluate within \code{lhs}.}
 }
 \value{
-The result of evaluating `rhs` within `lhs`.
+The result of evaluating \code{rhs} within \code{lhs}.
 }
 \description{
 Evaluates an expression within the environment of a data object.
