@@ -2,6 +2,7 @@
 % Please edit documentation in R/throughPipes.R
 \name{through_forward}
 \alias{through_forward}
+\alias{\%.>>\%}
 \title{Through Forward Pipe}
 \usage{
 through_forward(lhs, rhs)

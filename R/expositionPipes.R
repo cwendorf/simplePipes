@@ -7,11 +7,15 @@
 #' @param rhs An expression to evaluate within `lhs`.
 #' @return The result of evaluating `rhs` within `lhs`.
 #' @export
-exposition_forward <- "%$>%" <- function(lhs, rhs) {
+#' @aliases %$>%
+exposition_forward <- function(lhs, rhs) {
   lhs <- substitute(lhs)
   rhs <- substitute(rhs)
   do.call(with, list(lhs, rhs))
 }
+
+#' @export
+"%$>%" <- exposition_forward
 
 #' @title Exposition Backward Pipe
 #' @description Evaluates a data object within the environment of an expression.
@@ -19,8 +23,12 @@ exposition_forward <- "%$>%" <- function(lhs, rhs) {
 #' @param rhs A data object (e.g., a data frame).
 #' @return The result of evaluating `lhs` within `rhs`.
 #' @export
-exposition_backward <- "%<$%" <- function(lhs, rhs) {
+#' @aliases %<$%
+exposition_backward <- function(lhs, rhs) {
   lhs <- substitute(lhs)
   rhs <- substitute(rhs)
   do.call(with, list(rhs, lhs))
 }
+
+#' @export
+"%<$%" <- exposition_backward

@@ -2,6 +2,7 @@
 % Please edit documentation in R/assignmentPipes.R
 \name{compound_assignment}
 \alias{compound_assignment}
+\alias{\%<>\%}
 \title{Compound Assignment Pipe}
 \usage{
 compound_assignment(lhs, rhs)

@@ -2,6 +2,7 @@
 % Please edit documentation in R/dotPipes.R
 \name{dot_backward}
 \alias{dot_backward}
+\alias{\%<.\%}
 \title{Dot Backward Pipe}
 \usage{
 dot_backward(lhs, rhs)

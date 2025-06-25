@@ -7,8 +7,12 @@
 #' @param rhs A function to apply to `lhs`.
 #' @return The result assigned back to `lhs` in the global environment.
 #' @export
-compound_assignment <- "%<>%" <- function(lhs, rhs) {
+#' @aliases %<>%
+compound_assignment <- function(lhs, rhs) {
   x <- do.call(rhs, list(lhs))
   name <- substitute(lhs)
   assign(as.character(name), x, envir = .GlobalEnv)
 }
+
+#' @export
+"%<>%" <- compound_assignment

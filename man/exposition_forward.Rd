@@ -2,6 +2,7 @@
 % Please edit documentation in R/expositionPipes.R
 \name{exposition_forward}
 \alias{exposition_forward}
+\alias{\%$>\%}
 \title{Exposition Forward Pipe}
 \usage{
 exposition_forward(lhs, rhs)

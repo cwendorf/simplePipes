@@ -24,12 +24,16 @@ insert_dot <- function(expr) {
 #' @param rhs An expression using `.`.
 #' @return The result of evaluating `rhs` with `.` set to `lhs`.
 #' @export
-dot_foward <- "%.>%" <- forwardPipe <- function(lhs, rhs) {
+#' @aliases %.>%
+dot_forward <- function(lhs, rhs) {
   . <- eval(lhs)
   rhs <- substitute(rhs)
   rhs <- insert_dot(rhs)
   eval(rhs)
 }
+
+#' @export
+"%.>%" <- dot_forward
 
 #' @title Dot Backward Pipe
 #' @description Passes the right-hand value as `.` into the left-hand expression.
@@ -37,9 +41,13 @@ dot_foward <- "%.>%" <- forwardPipe <- function(lhs, rhs) {
 #' @param rhs An object to assign to `.`.
 #' @return The result of evaluating `lhs` with `.` set to `rhs`.
 #' @export
-dot_backward <- "%<.%" <- backwardPipe <- function(lhs, rhs) {
+#' @aliases %<.%
+dot_backward <- function(lhs, rhs) {
   . <- eval(rhs)
   lhs <- substitute(lhs)
   lhs <- insert_dot(lhs)
   eval(lhs)
 }
+
+#' @export
+"%<.%" <- dot_backward

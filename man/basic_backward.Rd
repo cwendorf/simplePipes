@@ -2,6 +2,7 @@
 % Please edit documentation in R/basicPipes.R
 \name{basic_backward}
 \alias{basic_backward}
+\alias{\%<\%}
 \title{Basic Backward Pipe}
 \usage{
 basic_backward(lhs, rhs)

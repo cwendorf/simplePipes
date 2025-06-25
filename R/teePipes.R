@@ -7,10 +7,14 @@
 #' @param rhs A function to apply to `lhs` for side effects.
 #' @return Invisibly returns `lhs`.
 #' @export
-tee_forward <- "%T>%" <- function(lhs, rhs) {
+#' @aliases %T>%
+tee_forward <- function(lhs, rhs) {
   do.call(rhs, list(lhs))
   invisible(lhs)
 }
+
+#' @export
+"%T>%" <- tee_forward
 
 #' @title Tee Backward Pipe
 #' @description Evaluates a function on the right-hand value for side effects, but returns the original right-hand value.
@@ -18,7 +22,11 @@ tee_forward <- "%T>%" <- function(lhs, rhs) {
 #' @param rhs An object to be passed to `lhs`.
 #' @return Invisibly returns `rhs`.
 #' @export
-tee_backward <- "%<T%" <- function(lhs, rhs) {
+#' @aliases %<T%
+tee_backward <- function(lhs, rhs) {
   do.call(lhs, list(rhs))
   invisible(rhs)
 }
+
+#' @export
+"%<T%" <- tee_backward

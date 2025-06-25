@@ -2,6 +2,7 @@
 % Please edit documentation in R/basicPipes.R
 \name{basic_forward}
 \alias{basic_forward}
+\alias{\%>\%}
 \title{Basic Forward Pipe}
 \usage{
 basic_forward(lhs, rhs)

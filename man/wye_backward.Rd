@@ -2,6 +2,7 @@
 % Please edit documentation in R/wyePipes.R
 \name{wye_backward}
 \alias{wye_backward}
+\alias{\%<Y\%}
 \title{Wye Backward Pipe}
 \usage{
 wye_backward(lhs, rhs)

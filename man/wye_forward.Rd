@@ -2,6 +2,7 @@
 % Please edit documentation in R/wyePipes.R
 \name{wye_forward}
 \alias{wye_forward}
+\alias{\%Y>\%}
 \title{Wye Forward Pipe}
 \usage{
 wye_forward(lhs, rhs)

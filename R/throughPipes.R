@@ -7,10 +7,14 @@
 #' @param rhs An expression using `.`.
 #' @return Invisibly returns `lhs` after printing the result of `rhs`.
 #' @export
-through_forward <- "%.>>%" <- function(lhs, rhs) {
+#' @aliases %.>>%
+through_forward <- function(lhs, rhs) {
   . <- eval(lhs)
   rhs <- substitute(rhs)
   rhs <- insert_dot(rhs)
   print(eval(rhs))
   invisible(.)
 }
+
+#' @export
+"%.>>%" <- through_forward

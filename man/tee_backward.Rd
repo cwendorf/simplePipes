@@ -2,6 +2,7 @@
 % Please edit documentation in R/teePipes.R
 \name{tee_backward}
 \alias{tee_backward}
+\alias{\%<T\%}
 \title{Tee Backward Pipe}
 \usage{
 tee_backward(lhs, rhs)

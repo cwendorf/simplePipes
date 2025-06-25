@@ -2,6 +2,7 @@
 % Please edit documentation in R/teePipes.R
 \name{tee_forward}
 \alias{tee_forward}
+\alias{\%T>\%}
 \title{Tee Forward Pipe}
 \usage{
 tee_forward(lhs, rhs)

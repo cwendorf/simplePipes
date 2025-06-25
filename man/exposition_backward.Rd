@@ -2,6 +2,7 @@
 % Please edit documentation in R/expositionPipes.R
 \name{exposition_backward}
 \alias{exposition_backward}
+\alias{\%<$\%}
 \title{Exposition Backward Pipe}
 \usage{
 exposition_backward(lhs, rhs)
