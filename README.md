@@ -20,7 +20,7 @@ remotes::install_github("cwendorf/simplePipes")
 library(simplePipes)
 ```
 
-If you do not wish a full install, the latest functions can be made available using these R commands:
+If you do not wish a full install, the latest functions can be made available using this R command:
 
 ```r
 source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simplePipes.R")
