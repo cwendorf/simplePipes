@@ -48,7 +48,7 @@ The most functional and flexible pipes use a placeholder (the dot) to provide fl
 
 - [throughPipes](./docs/throughPipes.md): Through pipes chain a series of commands, allowing the first piped values to be used as input in multiple subsequent commands (rather than just the next command in the chain). They expand the functionality of tee pipes.
 
-### Contact Me
+### Contact
 
 - GitHub Issues: [https://github.com/cwendorf/simplePipes/issues](https://github.com/cwendorf/simplePipes/issues) 
 - Author Email: [cwendorf@uwsp.edu](mailto:cwendorf@uwsp.edu)
