@@ -37,9 +37,9 @@ The simplest pipes implement piping, but they assume that the piped values are t
 - [teePipes](./docs/teePipes.md): Tee pipes are used when an intermediate command produces output (such as a plot).
 - [wyePipes](./docs/wyePipes.md): Wye pipes chain a first command to two (or more) subsequent commands simultaneously.
 - [expositionPipes](./docs/expositionPipes.md): Exposition pipes indicate a data set to be used for other commands (or pipes).
-- [assignmentPipes](./docs/assignmentPipes.md): Compound assignment pipes both chain commands and redefine the objects in the chain.
-- [dotPipes](./docs/dotPipes.md): Simple dot pipes also chain commands but expand on basic pipes by allowing the piped values to be placed anywhere in the next command in the chain.
-- [throughPipes](./docs/throughPipes.md): Through pipes chain a series of commands, allowing the first piped values to be used as input in multiple subsequent commands (rather than just the next command in the chain).
+- [assignmentPipes](./docs/assignmentPipes.md): Compound assignment pipes redefine the objects in the chain.
+- [dotPipes](./docs/dotPipes.md): Dot pipes by allow the piped values to be placed anywhere in the next command in the chain.
+- [throughPipes](./docs/throughPipes.md): Through pipes allow the piped values to be used in multiple subsequent commands.
 
 ### Contact
 
