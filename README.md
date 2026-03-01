@@ -30,8 +30,6 @@ source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simple
 
 This package contains a set of materials to demonstrate its use:
 
-The simplest pipes implement piping, but they assume that the piped values are the first and only arguments passed to the next command. They are useful for very simple analyses and are important for educational purposes, but may have limit application.
-
 - [Introduction](./docs/README.md): An overview of the different types of pipes.
 - [Basic Pipes](./docs/basicPipes.md): Basic pipes are used for chaining (rather than nesting) commands.
 - [Tee Pipes](./docs/teePipes.md): Tee pipes are used when an intermediate command produces output (such as a plot).
