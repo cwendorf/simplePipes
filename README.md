@@ -33,13 +33,13 @@ This package contains a set of materials to demonstrate its use:
 The simplest pipes implement piping, but they assume that the piped values are the first and only arguments passed to the next command. They are useful for very simple analyses and are important for educational purposes, but may have limit application.
 
 - [Introduction](./docs/README.md): An overview of the different types of pipes.
-- [basicPipes](./docs/basicPipes.md): Basic pipes are used for chaining (rather than nesting) commands.
-- [teePipes](./docs/teePipes.md): Tee pipes are used when an intermediate command produces output (such as a plot).
-- [wyePipes](./docs/wyePipes.md): Wye pipes chain a first command to two (or more) subsequent commands simultaneously.
-- [expositionPipes](./docs/expositionPipes.md): Exposition pipes indicate a data set to be used for other commands (or pipes).
-- [assignmentPipes](./docs/assignmentPipes.md): Compound assignment pipes redefine the objects in the chain.
-- [dotPipes](./docs/dotPipes.md): Dot pipes by allow the piped values to be placed anywhere in the next command in the chain.
-- [throughPipes](./docs/throughPipes.md): Through pipes allow the piped values to be used in multiple subsequent commands.
+- [Basic Pipes](./docs/basicPipes.md): Basic pipes are used for chaining (rather than nesting) commands.
+- [Tee Pipes](./docs/teePipes.md): Tee pipes are used when an intermediate command produces output (such as a plot).
+- [Wye Pipes](./docs/wyePipes.md): Wye pipes chain a first command to two (or more) subsequent commands simultaneously.
+- [Exposition Pipes](./docs/expositionPipes.md): Exposition pipes indicate a data set to be used for other commands (or pipes).
+- [Assignment Pipes](./docs/assignmentPipes.md): Compound assignment pipes redefine the objects in the chain.
+- [Dot Pipes](./docs/dotPipes.md): Dot pipes by allow the piped values to be placed anywhere in the next command in the chain.
+- [Through Pipes](./docs/throughPipes.md): Through pipes allow the piped values to be used in multiple subsequent commands.
 
 ### Contact
 
