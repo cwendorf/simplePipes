@@ -29,7 +29,7 @@ Assignment pipes both chain commands and redefine the objects in the chain.
 
 ```{r toc, echo=FALSE}
 thisfile <- knitr::current_input()
-revised_toc(thisfile, base_level = 3, toc_depth = 4)
+revised_toc(thisfile, base_level = 3, toc_depth = 1)
 ```
 
 ---
