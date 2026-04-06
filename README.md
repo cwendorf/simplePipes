@@ -1,5 +1,4 @@
-
-# `simplePipes` 
+# [`simplePipes`](https://github.com/cwendorf/simplePipes/)
 
 ## A Collection of Pipe Operators
 
