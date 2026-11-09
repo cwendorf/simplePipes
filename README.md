@@ -37,12 +37,6 @@ This package contains a set of materials to demonstrate its use:
 - [Assignment Pipes](./docs/assignmentPipes.md): Compound assignment pipes redefine the objects in the chain.
 - [Dot Pipes](./docs/dotPipes.md): Dot pipes by allow the piped values to be placed anywhere in the next command in the chain.
 - [Through Pipes](./docs/throughPipes.md): Through pipes allow the piped values to be used in multiple subsequent commands.
-
-### Contact
-
-- GitHub Issues: [https://github.com/cwendorf/simplePipes/issues](https://github.com/cwendorf/simplePipes/issues)
-- Author Email: [cwendorf@uwsp.edu](mailto:cwendorf@uwsp.edu)
-- Author Homepage: [https://github.com/cwendorf](https://github.com/cwendorf)
  
 ### Citation
 
