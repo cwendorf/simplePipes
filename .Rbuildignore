@@ -1,5 +1,5 @@
 ^README.md
 ^source-simplePipes.R
 docs/
-^.*\.Rproj$
-^\.Rproj\.user$
+vignettes/
+.github/
