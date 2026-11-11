@@ -5,9 +5,5 @@ authors:
   - family-names: "Wendorf"
     given-names: "Craig A."
     email: "cwendorf@uwsp.edu"
-version: "1.250625"
-license: "MIT"
-repository-code: "https://github.com/cwendorf/simplePipes"
+date-released: "2025-06-25"
 url: "https://github.com/cwendorf/simplePipes"
-abstract: >-
-  simplePipes provides a collection of lightweight pipe operators for R.
