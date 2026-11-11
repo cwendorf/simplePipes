@@ -12,23 +12,23 @@
 
 ### Installation
 
-This package is not currently on CRAN, but can be installed and loaded using these R commands:
+This package is not currently available on CRAN. It can be installed directly from GitHub:
 
 ``` r
-if (!require(remotes)) install.packages("remotes")
+if (!requireNamespace("remotes", quietly = TRUE)) install.packages("remotes")
 remotes::install_github("cwendorf/simplePipes")
 library(simplePipes)
 ```
 
-If you do not wish a full install, the latest functions can be made available using this R command:
+If you prefer not to install the package, you can load the current functions directly:
 
 ```r
-source("http://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simplePipes.R")
+source("https://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simplePipes.R")
 ```
 
 ### Usage
 
-This package contains a set of materials to demonstrate its use:
+This package includes the following documentation:
 
 - [Introduction](./docs/README.md): An overview of the different types of pipes.
 - [Basic Pipes](./docs/basicPipes.md): Basic pipes are used for chaining (rather than nesting) commands.
@@ -38,7 +38,7 @@ This package contains a set of materials to demonstrate its use:
 - [Assignment Pipes](./docs/assignmentPipes.md): Compound assignment pipes redefine the objects in the chain.
 - [Dot Pipes](./docs/dotPipes.md): Dot pipes by allow the piped values to be placed anywhere in the next command in the chain.
 - [Through Pipes](./docs/throughPipes.md): Through pipes allow the piped values to be used in multiple subsequent commands.
- 
+
 ### Citation
 
 Wendorf, C. A. (2023). *simplePipes: A collection of pipe operators* [R Package]. [https://github.com/cwendorf/simplePipes](https://github.com/cwendorf/simplePipes)
