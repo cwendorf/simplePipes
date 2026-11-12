@@ -38,7 +38,7 @@ the `variable`.
 plot(variable)
 ```
 
-![](figures/Standard-Plot-1.png)<!-- -->
+![](../figures/Standard-Plot-1.png)<!-- -->
 
 ``` r
 mean(variable)
@@ -61,7 +61,7 @@ manipulation is needed. See the implementation of through pipes.)
 variable |> (\(x) { plot(x); x } )() |> mean()
 ```
 
-![](figures/unnamed-chunk-5-1.png)<!-- -->
+![](../figures/unnamed-chunk-5-1.png)<!-- -->
 
     ## [1] 6.833333
 
@@ -74,7 +74,7 @@ Using the forward tee pipe (and chaining in a basic pipe), identify the
 variable %T>% plot %>% mean
 ```
 
-![](figures/Forward-Tee-Plot-1.png)<!-- -->
+![](../figures/Forward-Tee-Plot-1.png)<!-- -->
 
     ## [1] 6.833333
 
@@ -87,6 +87,6 @@ Using the backward tee pipe (and chaining in a basic pipe), `plot` the
 plot %<T% variable %>% mean
 ```
 
-![](figures/Backward-Tee-Plot-1.png)<!-- -->
+![](../figures/Backward-Tee-Plot-1.png)<!-- -->
 
     ## [1] 6.833333

@@ -30,14 +30,9 @@ source("https://raw.githubusercontent.com/cwendorf/simplePipes/main/source-simpl
 
 This package includes the following documentation:
 
-- [Introduction](./docs/README.md): An overview of the different types of pipes.
-- [Basic Pipes](./docs/basicPipes.md): Basic pipes are used for chaining (rather than nesting) commands.
-- [Tee Pipes](./docs/teePipes.md): Tee pipes are used when an intermediate command produces output (such as a plot).
-- [Wye Pipes](./docs/wyePipes.md): Wye pipes chain a first command to two (or more) subsequent commands simultaneously.
-- [Exposition Pipes](./docs/expositionPipes.md): Exposition pipes indicate a data set to be used for other commands (or pipes).
-- [Assignment Pipes](./docs/assignmentPipes.md): Compound assignment pipes redefine the objects in the chain.
-- [Dot Pipes](./docs/dotPipes.md): Dot pipes by allow the piped values to be placed anywhere in the next command in the chain.
-- [Through Pipes](./docs/throughPipes.md): Through pipes allow the piped values to be used in multiple subsequent commands.
+- [Introduction](./docs/README.md): Overview of the package and links to all resources.
+- [Reference](./docs/man/README.md): Documentation for all exported pipe operators, including usage, arguments, and return values.
+- [Articles](./docs/vignettes/README.md): Examples demonstrating how to use the package.
 
 ### Citation
 
