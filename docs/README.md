@@ -2,7 +2,16 @@
 
 ## Introduction
 
-`simplePipes` is a small R package that implements a variety of simple pipe operators. It has less error checking than major R packages (like magrittr or dplyr) but contains more varieties -- both forward and backward versions of basic, tee, wye, exposition, compound assignment, and dot pipes -- and introduces the concept of through pipes. It also implements syntax that is simpler than the R native forward pipe.
+Different workflows may need more than a simple forward pipe, especially when preserving values, evaluating expressions, or reassigning results. `simplePipes` adds lightweight forward and backward operators for these piping patterns.
+
+- [Overview](#overview)
+- [Resources](#resources)
+
+---
+
+### Overview
+
+The package provides forward and backward versions of basic, tee, wye, exposition, compound assignment, and dot pipes, and adds a through pipe for reusing an original value in a chain. It offers less error checking than major packages such as `magrittr` or `dplyr`, but includes operator types and syntax not available in R's native forward pipe.
 
 ### Resources
 

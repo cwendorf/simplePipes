@@ -2,7 +2,17 @@
 
 ## Reference
 
-This section documents the exported pipe operators, including usage, arguments, and return values.
+This section documents the exported pipe operators. Each page documents one exported function, including usage, arguments, return values, and examples.
+
+- [Basic Pipes](#basic-pipes)
+- [Tee Pipes](#tee-pipes)
+- [Wye Pipes](#wye-pipes)
+- [Exposition Pipes](#exposition-pipes)
+- [Assignment Pipe](#assignment-pipe)
+- [Dot Pipes](#dot-pipes)
+- [Through Pipe](#through-pipe)
+
+---
 
 ### Basic Pipes
 

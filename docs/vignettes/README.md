@@ -2,7 +2,13 @@
 
 ## Articles
 
-The articles demonstrate different pipe concepts and their use in R.
+This section contains articles for `simplePipes`. They explain how the package's operators support data flow, side effects, expression evaluation, and value reuse.
+
+- [Simplest Pipes](#simplest-pipes)
+- [Data Manipulation Pipes](#data-manipulation-pipes)
+- [Placeholder Pipes](#placeholder-pipes)
+
+---
 
 ### Simplest Pipes
 
